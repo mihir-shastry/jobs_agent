@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Agent — Tech Job Postings</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #f6f7f9; color: #1a1a2e; }
+  header { background: #1a1a2e; color: #fff; padding: 1.2rem 1.5rem; display: flex; flex-wrap: wrap; gap: .8rem; align-items: baseline; }
+  header h1 { font-size: 1.25rem; margin: 0; }
+  header .meta { color: #9aa0b5; font-size: .85rem; }
+  main { max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem 3rem; }
+  .filters { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0; align-items: center; }
+  .filters input[type=search] { flex: 1; min-width: 220px; padding: .5rem .7rem; border: 1px solid #ccc; border-radius: 8px; font-size: .95rem; }
+  .filters select { padding: .45rem; border-radius: 8px; border: 1px solid #ccc; font-size: .9rem; }
+  .filters label { font-size: .88rem; display: inline-flex; align-items: center; gap: .3rem; }
+  .count { font-size: .85rem; color: #666; margin: .6rem 0; }
+  .job { background: #fff; border: 1px solid #e4e6eb; border-radius: 10px; padding: .8rem 1rem; margin-bottom: .6rem; display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; }
+  .job .title { font-weight: 600; font-size: .98rem; }
+  .job .title a { color: #1a1a2e; text-decoration: none; }
+  .job .title a:hover { text-decoration: underline; }
+  .job .company { color: #555; font-size: .92rem; min-width: 120px; }
+  .job .loc { color: #777; font-size: .85rem; flex: 1; }
+  .badge { font-size: .72rem; padding: .12rem .55rem; border-radius: 999px; background: #eef1f6; white-space: nowrap; }
+  .badge.internship { background: #e0f2fe; color: #075985; }
+  .badge.new_grad { background: #fef9c3; color: #854d0e; }
+  .badge.entry { background: #dcfce7; color: #166534; }
+  .badge.mid { background: #e0e7ff; color: #3730a3; }
+  .badge.senior { background: #fae8ff; color: #86198f; }
+  .badge.remote { background: #d1fae5; color: #065f46; }
+  .status-btns { display: flex; gap: .3rem; }
+  .status-btns button { font-size: .75rem; padding: .2rem .5rem; border: 1px solid #d5d8e0; background: #fff; border-radius: 6px; cursor: pointer; }
+  .status-btns button.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
+  .applied .title a { color: #16a34a; }
+  .ignored { opacity: .45; }
+  .loaderr { text-align: center; color: #b00; padding: 2rem; }
+  footer { text-align: center; color: #999; font-size: .8rem; padding: 1rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #12141c; color: #e4e6eb; }
+    .job { background: #1b1e29; border-color: #2a2e3d; }
+    .job .title a { color: #e4e6eb; }
+    .job .company { color: #aab; } .job .loc { color: #889; }
+    .filters input[type=search], .filters select { background: #1b1e29; color: #e4e6eb; border-color: #2a2e3d; }
+    .badge { background: #2a2e3d; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>💼 Job Agent</h1>
+  <span class="meta" id="meta">loading…</span>
+</header>
+<main>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search title, company, location…">
+    <select id="level">
+      <option value="">All levels</option>
+      <option value="internship">Internship</option>
+      <option value="new_grad">New grad</option>
+      <option value="entry">Entry</option>
+      <option value="mid">Mid</option>
+      <option value="senior">Senior</option>
+    </select>
+    <select id="platform">
+      <option value="">All platforms</option>
+      <option value="greenhouse">Greenhouse</option>
+      <option value="lever">Lever</option>
+      <option value="ashby">Ashby</option>
+    </select>
+    <label><input type="checkbox" id="remote"> Remote only</label>
+    <label><input type="checkbox" id="hideApplied"> Hide applied/ignored</label>
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"><div class="loaderr">Loading jobs…</div></div>
+</main>
+<footer>Auto-scraped from public ATS APIs · <span id="seenCount"></span> · statuses stored locally in your browser</footer>
+
+<script>
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  let ALL = [];
+  const LS_KEY = "jobagent-statuses";
+
+  const loadStatuses = () => { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch { return {}; } };
+  const saveStatuses = (s) => localStorage.setItem(LS_KEY, JSON.stringify(s));
+  let statuses = loadStatuses();
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function matches(j) {
+    const q = $("q").value.trim().toLowerCase();
+    if (q && !(j.title + " " + j.company_name + " " + (j.location || "")).toLowerCase().includes(q)) return false;
+    if ($("level").value && j.experience_level !== $("level").value) return false;
+    if ($("platform").value && j.ats_platform !== $("platform").value) return false;
+    if ($("remote").checked && !(j.location || "").toLowerCase().includes("remote")) return false;
+    if ($("hideApplied").checked && ["applied", "ignored"].includes(statuses[j.id])) return false;
+    return true;
+  }
+
+  function render() {
+    const list = $("list");
+    const visible = ALL.filter(matches);
+    $("count").textContent = `${visible.length} of ${ALL.length} jobs`;
+    if (!visible.length) { list.innerHTML = "<div class='loaderr'>No matching jobs.</div>"; return; }
+    list.innerHTML = visible.slice(0, 300).map((j) => {
+      const st = statuses[j.id] || "";
+      const cls = "job" + (st === "applied" ? " applied" : st === "ignored" ? " ignored" : "");
+      const btn = (v, label) => `<button data-id="${j.id}" data-v="${v}" class="${st === v ? "active" : ""}">${label}</button>`;
+      const remote = (j.location || "").toLowerCase().includes("remote") ? `<span class="badge remote">remote</span>` : "";
+      return `<div class="${cls}">
+        <span class="title"><a href="${esc(j.apply_url)}" target="_blank" rel="noopener">${esc(j.title)}</a></span>
+        <span class="company">${esc(j.company_name)}</span>
+        <span class="loc">${esc(j.location || "")}</span>
+        <span class="badge ${esc(j.experience_level)}">${esc(j.experience_level.replace("_", " "))}</span>
+        ${remote}
+        <span class="status-btns">${btn("saved", "⭐")}${btn("applied", "✓")}${btn("ignored", "✕")}${btn("", "·")}</span>
+      </div>`;
+    }).join("");
+  }
+
+  $("list").addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-id]");
+    if (!btn) return;
+    const { id, v } = btn.dataset;
+    if (v) statuses[id] = v; else delete statuses[id];
+    saveStatuses(statuses);
+    render();
+  });
+
+  ["q", "level", "platform", "remote", "hideApplied"].forEach((id) => {
+    $(id).addEventListener(id === "q" ? "input" : "change", render);
+  });
+
+  fetch("jobs.json")
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((data) => {
+      ALL = data.jobs || [];
+      $("meta").textContent = `${data.total} jobs · updated ${new Date(data.generated_at).toLocaleString()}`;
+      $("seenCount").textContent = `${ALL.length} active postings`;
+      render();
+    })
+    .catch(() => { $("list").innerHTML = "<div class='loaderr'>Could not load jobs.json — has the first scrape run yet?</div>"; });
+})();
+</script>
+</body>
+</html>

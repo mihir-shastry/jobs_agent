@@ -98,6 +98,21 @@ class Config:
             raw = self._base_dir / raw
         return raw
 
+    # -- mutation ---------------------------------------------------------
+
+    def with_notifications(self, enabled: bool) -> "Config":
+        """Return a copy with notifications force-enabled/disabled.
+
+        The portable pipeline disables the in-engine notifier (it handles
+        digest delivery itself), while keeping config as the single source
+        of filter/webhook settings.
+        """
+        clone = Config(dict(self._data), self._base_dir)
+        node = dict(clone._data.get("notifications") or {})
+        node["enabled"] = enabled
+        clone._data["notifications"] = node
+        return clone
+
     # -- helpers ----------------------------------------------------------
 
     def _get(self, *keys: str, default: Any = None) -> Any:

@@ -1,0 +1,63 @@
+name: Scrape jobs and deploy dashboard
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # hourly
+  workflow_dispatch: {}    # manual trigger button
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: scrape-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install .
+
+      - name: Run portable scrape (Slack digest + docs/jobs.json)
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python -m jobagent scrape-portable
+
+      - name: Commit state (seen keys + exported jobs)
+        run: |
+          git config user.name "jobagent bot"
+          git config user.email "action@github.com"
+          git add data/seen_jobs.jsonl docs/jobs.json
+          if git diff --cached --quiet; then
+            echo "No state changes"
+          else
+            git commit -m "scrape: update seen keys and jobs export ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
+
+  deploy:
+    needs: scrape
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4   # re-checkout with the commit pushed above
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -76,6 +76,30 @@ async def _run_scrape() -> int:
         await db.close()
 
 
+async def _run_scrape_portable() -> int:
+    import os
+
+    from .portable import run_portable_cycle
+
+    config = load_config()
+    repo_root = Path(os.environ.get("GITHUB_WORKSPACE", Path.cwd()))
+    seen_path = Path(os.environ.get("JOBAGENT_SEEN_FILE", repo_root / "data" / "seen_jobs.jsonl"))
+    export_path = Path(os.environ.get("JOBAGENT_EXPORT_PATH", repo_root / "docs" / "jobs.json"))
+
+    seed_override = os.environ.get("JOBAGENT_SEED_FILE")
+    summary = await run_portable_cycle(
+        config, seen_path, export_path,
+        seed_file=Path(seed_override) if seed_override else None,
+    )
+    print(
+        f"PORTABLE SUMMARY: boards={summary['boards_scraped']} "
+        f"jobs={summary['jobs_found']} new={summary['new_jobs']} "
+        f"digest={'sent' if summary['digest_sent'] else 'not-sent'} "
+        f"errors={summary['errors']}"
+    )
+    return 0
+
+
 async def _discover() -> int:
     """Probe candidate slugs and persist boards that respond."""
     import httpx
@@ -169,6 +193,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("serve", help="start dashboard + hourly scraper")
     sub.add_parser("scrape", help="run one scrape cycle now")
+    sub.add_parser("scrape-portable", help="one-shot scrape for CI: dedupe via data/seen_jobs.jsonl, Slack digest, export docs/jobs.json")
     sub.add_parser("seed-companies", help="load data/seed_companies.json into the DB")
     sub.add_parser("discover", help="probe candidate slugs for new boards")
     sub.add_parser("stats", help="print job/company counts")
@@ -180,6 +205,8 @@ def main(argv: list[str] | None = None) -> int:
         return _serve()
     if args.command == "scrape":
         return asyncio.run(_run_scrape())
+    if args.command == "scrape-portable":
+        return asyncio.run(_run_scrape_portable())
     if args.command == "seed-companies":
         return asyncio.run(_seed_companies())
     if args.command == "discover":

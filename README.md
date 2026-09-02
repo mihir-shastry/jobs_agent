@@ -60,6 +60,39 @@ uv run python -m jobagent scrape
 2. Enable **Incoming Webhooks** and add one for your channel (e.g. `#jobs`).
 3. Copy the `https://hooks.slack.com/services/...` URL into `config.yaml` or `export SLACK_WEBHOOK_URL=...`.
 
+## Free hosting: GitHub Actions + Pages
+
+The agent can run entirely outside your Mac for free: a scheduled GitHub Actions workflow scrapes hourly, sends the Slack digest to your phone, commits a small state file, and publishes a static dashboard to GitHub Pages. No credit card, no server.
+
+### One-time setup
+
+1. **Push this repo to GitHub** (public works best — free Actions minutes are unlimited on public repos).
+2. **Add the Slack secret:** repo → *Settings* → *Secrets and variables* → *Actions* → *New repository secret* → name `SLACK_WEBHOOK_URL`, value = your webhook URL.
+3. **Enable Pages:** repo → *Settings* → *Pages* → *Build and deployment* → Source: **GitHub Actions**.
+4. Trigger the first run: repo → *Actions* → "Scrape jobs and deploy dashboard" → *Run workflow*. (The hourly cron also self-disables after 60 days with no repo activity — the workflow's own commits keep it alive.)
+
+After the first run, your dashboard is live at `https://<user>.github.io/<repo>/`.
+
+### What changes vs. running locally
+
+| | Local (`serve`) | GitHub Actions (`scrape-portable`) |
+|---|---|---|
+| Storage | SQLite (`data/jobs.db`) | Temp DB per run + committed `data/seen_jobs.jsonl` (seen-keys, pruned after 30 days) |
+| Dashboard | Interactive FastAPI/HTMX app | Static `docs/index.html` reading `docs/jobs.json` (search, filters, statuses via localStorage) |
+| Notifications | Batched Slack digest | Identical batched Slack digest |
+| Company list | `data/seed_companies.json` | Same file — edit it and the next run picks it up |
+
+The portable path reuses the same adapters, classifier, and notifier as local mode; only delivery and state differ.
+
+### Local dry run
+
+You can exercise the exact CI pipeline locally:
+
+```bash
+uv run python -m jobagent scrape-portable
+# writes data/seen_jobs.jsonl and docs/jobs.json
+```
+
 ## Design doc
 
 See [`docs/superpowers/specs/2026-09-02-job-agent-design.md`](docs/superpowers/specs/2026-09-02-job-agent-design.md) for the full architecture, data model, and testing strategy.
