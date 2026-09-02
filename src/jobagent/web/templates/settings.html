@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Settings · Job Agent{% endblock %}
+{% block content %}
+<h1>Settings</h1>
+
+<article>
+  <h2>Scraper</h2>
+  <p>
+    Last run: <strong>{{ scraper_status.last_run or "never" }}</strong><br>
+    Companies tracked: <strong>{{ scraper_status.companies }}</strong> ·
+    Active jobs: <strong>{{ scraper_status.active_jobs }}</strong> ·
+    Interval: every <strong>{{ interval_minutes }} min</strong>
+  </p>
+  <form method="post" action="/scrape">
+    <button>Run scrape now</button>
+  </form>
+</article>
+
+<article>
+  <h2>Notifications</h2>
+  <p>
+    Slack webhook: <strong>{{ "configured ✓" if webhook_configured else "not configured ✗" }}</strong><br>
+    Enabled: <strong>{{ "yes" if notifications_enabled else "no" }}</strong><br>
+    Notify on levels: <strong>{{ filters.levels | join(", ") if filters.levels else "all" }}</strong><br>
+    Notify on categories: <strong>{{ filters.categories | join(", ") if filters.categories else "all" }}</strong>
+  </p>
+  <p class="muted">
+    To change these, edit <code>config.yaml</code> (or set <code>SLACK_WEBHOOK_URL</code>) and restart.
+    Get a webhook URL from api.slack.com → Your apps → Incoming Webhooks.
+  </p>
+  <form method="post" action="/notify-test">
+    <button class="outline">Send test digest (5 latest jobs)</button>
+  </form>
+  {% if request.query_params.get("test") == "sent" %}<p class="muted">✓ Test digest sent — check Slack.</p>
+  {% elif request.query_params.get("test") == "failed" %}<p class="muted">✗ Send failed — check webhook URL and logs.</p>
+  {% elif request.query_params.get("test") == "no_jobs" %}<p class="muted">No jobs yet — run a scrape first.</p>{% endif %}
+</article>
+
+<article>
+  <h2>How notifications work</h2>
+  <p class="muted">
+    Each scrape cycle, new jobs matching your filters are grouped into one Slack
+    message by experience level. Jobs are only ever notified once. If nothing
+    new matches, no message is sent.
+  </p>
+</article>
+{% endblock %}

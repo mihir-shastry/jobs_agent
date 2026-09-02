@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Jobs · Job Agent{% endblock %}
+{% block content %}
+<h1>Job Postings <span class="muted">({{ total }} matching)</span></h1>
+
+<form method="get" action="/jobs" id="filters"
+      hx-get="/jobs" hx-target="#job-list" hx-trigger="change from:#filters, input delay:400ms from:#q, submit">
+  <div class="filterbar">
+    <input type="search" id="q" name="q" value="{{ q }}" placeholder="Search title, company, description…" style="flex:1; min-width:200px;">
+    <select name="sort" aria-label="Sort">
+      {% for s in ("newest", "oldest", "company", "title") %}
+      <option value="{{ s }}" {% if sort == s %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+    <label><input type="checkbox" name="remote_only" value="true" {% if remote_only %}checked{% endif %}> Remote only</label>
+  </div>
+  <div class="filterbar">
+    {% for lv in experience_levels %}
+    <label><input type="checkbox" name="level" value="{{ lv }}" {% if lv in selected_levels %}checked{% endif %}> {{ lv.replace('_',' ') }}</label>
+    {% endfor %}
+  </div>
+  <div class="filterbar">
+    {% for c in categories %}
+    <label><input type="checkbox" name="category" value="{{ c }}" {% if c in selected_categories %}checked{% endif %}> {{ c.replace('_',' ') }}</label>
+    {% endfor %}
+    {% for p in platforms %}
+    <label><input type="checkbox" name="platform" value="{{ p }}" {% if p in selected_platforms %}checked{% endif %}> {{ p }}</label>
+    {% endfor %}
+    <button type="button" class="outline" onclick="clearFilters()">Clear</button>
+  </div>
+</form>
+
+<div id="job-list">
+  {% include "_job_table.html" %}
+</div>
+
+<script>
+function clearFilters() {
+  document.querySelectorAll('#filters input[type=checkbox]').forEach(cb => cb.checked = false);
+  document.getElementById('q').value = '';
+  htmx.trigger('#filters', 'submit');
+}
+</script>
+{% endblock %}

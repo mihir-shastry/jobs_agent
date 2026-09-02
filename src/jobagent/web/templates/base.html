@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Job Agent{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+  <style>
+    :root { --pico-font-size: 95%; }
+    .level-badge { display: inline-block; font-size: .72rem; padding: .1rem .5rem; border-radius: 1rem; background: var(--pico-secondary-background); }
+    .level-internship { background: #e0f2fe; color: #075985; }
+    .level-new_grad { background: #fef9c3; color: #854d0e; }
+    .level-entry { background: #dcfce7; color: #166534; }
+    .level-mid { background: #e0e7ff; color: #3730a3; }
+    .level-senior { background: #fae8ff; color: #86198f; }
+    .filterbar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+    .filterbar label { display: inline-flex; gap: .3rem; align-items: center; margin: 0; }
+    table.jobs td { padding: .45rem .6rem; }
+    .muted { color: var(--pico-muted-color); font-size: .85rem; }
+    .statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .barchart .row { display: grid; grid-template-columns: 160px 1fr 3rem; gap: .5rem; align-items: center; margin-bottom: .3rem; }
+    .barchart .bar { height: 1.1rem; background: var(--pico-primary-background); border-radius: .25rem; min-width: 2px; }
+  </style>
+</head>
+<body>
+<main class="container">
+  <nav>
+    <ul><li><strong><a href="/jobs" class="contrast">💼 Job Agent</a></strong></li></ul>
+    <ul>
+      <li><a href="/jobs">Jobs</a></li>
+      <li><a href="/stats">Stats</a></li>
+      <li><a href="/settings">Settings</a></li>
+    </ul>
+  </nav>
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ job.title }} · {{ job.company_name }}{% endblock %}
+{% block content %}
+<p class="muted"><a href="/jobs">← Back to all jobs</a></p>
+<h1>{{ job.title }}</h1>
+<p>
+  <strong>{{ job.company_name }}</strong>
+  <span class="muted">via {{ job.ats_platform }}</span> ·
+  {{ job.location or "Location not specified" }} ·
+  <span class="level-badge level-{{ job.experience_level }}">{{ job.experience_level.replace('_',' ') }}</span>
+  <span class="level-badge">{{ job.category.replace('_',' ') }}</span>
+  {% if job.salary_min and job.salary_max %}
+  · ${{ "{:,}".format(job.salary_min) }}–${{ "{:,}".format(job.salary_max) }} {{ job.salary_currency or "" }}
+  {% endif %}
+</p>
+
+<p>
+  <a class="button" href="{{ job.apply_url }}" target="_blank" rel="noopener">Apply on {{ job.ats_platform }} ↗</a>
+  {% if job.company_career_url %}
+  <a class="button outline" href="{{ job.company_career_url }}" target="_blank" rel="noopener">Company careers</a>
+  {% endif %}
+</p>
+
+<p class="muted">Status:
+  {% if status == "saved" %}⭐ Saved{% elif status == "applied" %}✅ Applied{% elif status == "ignored" %}🚫 Ignored{% else %}—{% endif %}
+</p>
+<form method="post" action="/jobs/{{ job.id }}/status" class="filterbar">
+  <button name="status" value="saved" class="outline">⭐ Save</button>
+  <button name="status" value="applied" class="outline">✅ Mark applied</button>
+  <button name="status" value="ignored" class="outline">🚫 Ignore</button>
+</form>
+
+{% if job.description %}
+<h2>Description</h2>
+<article class="description">
+  {{ job.description | safe }}
+</article>
+{% endif %}
+
+{% if others %}
+<h2>Other roles at {{ job.company_name }}</h2>
+<ul>
+  {% for o in others %}
+  <li><a href="/jobs/{{ o.id }}">{{ o.title }}</a> <span class="muted">{{ o.location or "" }}</span></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

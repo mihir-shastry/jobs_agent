@@ -1,0 +1,32 @@
+<table class="jobs">
+  <thead>
+    <tr>
+      <th>Title</th><th>Company</th><th>Location</th><th>Level</th><th>Category</th><th>Seen</th><th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for job in jobs %}
+    <tr>
+      <td><a href="/jobs/{{ job.id }}">{{ job.title }}</a></td>
+      <td>{{ job.company_name }}</td>
+      <td>{{ job.location or "—" }}</td>
+      <td><span class="level-badge level-{{ job.experience_level }}">{{ job.experience_level.replace('_',' ') }}</span></td>
+      <td class="muted">{{ job.category.replace('_',' ') }}</td>
+      <td class="muted">{{ job.first_seen_at[:10] if job.first_seen_at else "" }}</td>
+      <td><a href="{{ job.apply_url }}" target="_blank" rel="noopener">Apply ↗</a></td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7">No jobs match. Run the scraper or relax filters.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if total_pages > 1 %}
+<nav>
+  <ul>
+    <li>{% if page > 1 %}<a href="#" hx-get="/jobs?page={{ page - 1 }}" hx-target="#job-list" hx-include="#filters" hx-select="#job-list">← Prev</a>{% endif %}</li>
+    <li class="muted">Page {{ page }} / {{ total_pages }}</li>
+    <li>{% if page < total_pages %}<a href="#" hx-get="/jobs?page={{ page + 1 }}" hx-target="#job-list" hx-include="#filters" hx-select="#job-list">Next →</a>{% endif %}</li>
+  </ul>
+</nav>
+{% endif %}

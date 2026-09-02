@@ -1,0 +1,494 @@
+[
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/stripe"
+  },
+  {
+    "name": "Airbnb",
+    "slug": "airbnb",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/airbnb"
+  },
+  {
+    "name": "Databricks",
+    "slug": "databricks",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/databricks"
+  },
+  {
+    "name": "Figma",
+    "slug": "figma",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/figma"
+  },
+  {
+    "name": "Coinbase",
+    "slug": "coinbase",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/coinbase"
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/notion"
+  },
+  {
+    "name": "Flexport",
+    "slug": "flexport",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/flexport"
+  },
+  {
+    "name": "Webflow",
+    "slug": "webflow",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/webflow"
+  },
+  {
+    "name": "Discord",
+    "slug": "discord",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/discord"
+  },
+  {
+    "name": "Canva",
+    "slug": "canva",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/canva"
+  },
+  {
+    "name": "Doordash",
+    "slug": "doordash",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/doordash"
+  },
+  {
+    "name": "Instacart",
+    "slug": "instacart",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/instacart"
+  },
+  {
+    "name": "Pinterest",
+    "slug": "pinterest",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/pinterest"
+  },
+  {
+    "name": "Reddit",
+    "slug": "reddit",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/reddit"
+  },
+  {
+    "name": "Twilio",
+    "slug": "twilio",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/twilio"
+  },
+  {
+    "name": "Dropbox",
+    "slug": "dropbox",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/dropbox"
+  },
+  {
+    "name": "Robinhood",
+    "slug": "robinhood",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/robinhood"
+  },
+  {
+    "name": "Affirm",
+    "slug": "affirm",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/affirm"
+  },
+  {
+    "name": "ZipRecruiter",
+    "slug": "ziprecruiter",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/ziprecruiter"
+  },
+  {
+    "name": "Gusto",
+    "slug": "gusto",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/gusto"
+  },
+  {
+    "name": "Ripple",
+    "slug": "ripple",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/ripple"
+  },
+  {
+    "name": "Nuro",
+    "slug": "nuro",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/nuro"
+  },
+  {
+    "name": "Scale AI",
+    "slug": "scaleai",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/scaleai"
+  },
+  {
+    "name": "Bungie",
+    "slug": "bungie",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/bungie"
+  },
+  {
+    "name": "Duolingo",
+    "slug": "duolingo",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/duolingo"
+  },
+  {
+    "name": "Lyft",
+    "slug": "lyft",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/lyft"
+  },
+  {
+    "name": "Cloudflare",
+    "slug": "cloudflare",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/cloudflare"
+  },
+  {
+    "name": "Datadog",
+    "slug": "datadog",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/datadog"
+  },
+  {
+    "name": "Sumo Logic",
+    "slug": "sumologic",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/sumologic"
+  },
+  {
+    "name": "Confluent",
+    "slug": "confluent",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/confluent"
+  },
+  {
+    "name": "Elastic",
+    "slug": "elastic",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/elastic"
+  },
+  {
+    "name": "Gitlab",
+    "slug": "gitlab",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/gitlab"
+  },
+  {
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/mongodb"
+  },
+  {
+    "name": "Vercel",
+    "slug": "vercel",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/vercel"
+  },
+  {
+    "name": "Discourse",
+    "slug": "discourse",
+    "ats_platform": "greenhouse",
+    "ats_board_url": "https://boards.greenhouse.io/discourse"
+  },
+  {
+    "name": "Plaid",
+    "slug": "plaid",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/plaid"
+  },
+  {
+    "name": "Ramp",
+    "slug": "ramp",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/ramp"
+  },
+  {
+    "name": "Rippling",
+    "slug": "rippling",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/rippling"
+  },
+  {
+    "name": "Deel",
+    "slug": "Deel",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/Deel"
+  },
+  {
+    "name": "Retool",
+    "slug": "retool",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/retool"
+  },
+  {
+    "name": "Sourcegraph",
+    "slug": "sourcegraph",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/sourcegraph"
+  },
+  {
+    "name": "Netlify",
+    "slug": "netlify",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/netlify"
+  },
+  {
+    "name": "Twitch",
+    "slug": "twitch",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/twitch"
+  },
+  {
+    "name": "Anyscale",
+    "slug": "anyscale",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/anyscale"
+  },
+  {
+    "name": "Weights & Biases",
+    "slug": "wandb",
+    "ats_platform": "lever",
+    "ats_board_url": "https://jobs.lever.co/wandb"
+  },
+  {
+    "name": "Neon",
+    "slug": "neon",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/neon"
+  },
+  {
+    "name": "Supabase",
+    "slug": "supabase",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/supabase"
+  },
+  {
+    "name": "Linear",
+    "slug": "linear",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/linear"
+  },
+  {
+    "name": "Anthropic",
+    "slug": "anthropic",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/anthropic"
+  },
+  {
+    "name": "OpenAI",
+    "slug": "openai",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/openai"
+  },
+  {
+    "name": "Perplexity",
+    "slug": "perplexity",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/perplexity"
+  },
+  {
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/elevenlabs"
+  },
+  {
+    "name": "Mistral AI",
+    "slug": "mistral",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/mistral"
+  },
+  {
+    "name": "Together AI",
+    "slug": "togetherai",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/together.ai"
+  },
+  {
+    "name": "Replit",
+    "slug": "replit",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/replit"
+  },
+  {
+    "name": "Zed",
+    "slug": "zed",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/zed"
+  },
+  {
+    "name": "Warp",
+    "slug": "warp",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/warp"
+  },
+  {
+    "name": "Arc",
+    "slug": "arc",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/arc"
+  },
+  {
+    "name": "Raycast",
+    "slug": "raycast",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/raycast"
+  },
+  {
+    "name": "Clerk",
+    "slug": "clerk",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/clerk"
+  },
+  {
+    "name": "Resend",
+    "slug": "resend",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/resend"
+  },
+  {
+    "name": "Bundled",
+    "slug": "bundled",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/bundled"
+  },
+  {
+    "name": "E2B",
+    "slug": "e2b",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/e2b"
+  },
+  {
+    "name": "Exa",
+    "slug": "exa",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/exa"
+  },
+  {
+    "name": "Fireworks AI",
+    "slug": "fireworks",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/fireworks"
+  },
+  {
+    "name": "Groq",
+    "slug": "groq",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/groq"
+  },
+  {
+    "name": "LangChain",
+    "slug": "langchain",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/langchain"
+  },
+  {
+    "name": "LlamaIndex",
+    "slug": "llamaindex",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/llamaindex"
+  },
+  {
+    "name": "Pinecone",
+    "slug": "pinecone",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/pinecone"
+  },
+  {
+    "name": "Qdrant",
+    "slug": "qdrant",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/qdrant"
+  },
+  {
+    "name": "Weaviate",
+    "slug": "weaviate",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/weaviate"
+  },
+  {
+    "name": "Modal",
+    "slug": "modal-labs",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/modal-labs"
+  },
+  {
+    "name": "Baseten",
+    "slug": "baseten",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/baseten"
+  },
+  {
+    "name": "Anon",
+    "slug": "anon",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/anon"
+  },
+  {
+    "name": "Calendar",
+    "slug": "calendar",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/calendar"
+  },
+  {
+    "name": "Cursor",
+    "slug": "cursor",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/cursor"
+  },
+  {
+    "name": "Codeium",
+    "slug": "codeium",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/codeium"
+  },
+  {
+    "name": "Sourcegraph Cody",
+    "slug": "sourcegraph-cody",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/sourcegraph-cody"
+  },
+  {
+    "name": "Hugging Face",
+    "slug": "huggingface",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/huggingface"
+  },
+  {
+    "name": "Runway",
+    "slug": "runway",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/runway"
+  },
+  {
+    "name": "Stability AI",
+    "slug": "stability",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/stability"
+  },
+  {
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "ats_platform": "ashby",
+    "ats_board_url": "https://jobs.ashbyhq.com/midjourney"
+  }
+]

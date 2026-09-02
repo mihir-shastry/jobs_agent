@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Stats · Job Agent{% endblock %}
+{% block content %}
+<h1>Stats</h1>
+
+<div class="statgrid">
+  <article><h2>{{ stats.active_jobs }}</h2><p class="muted">active jobs</p></article>
+  <article><h2>{{ stats.companies }}</h2><p class="muted">companies tracked</p></article>
+</div>
+
+<div class="statgrid">
+  <article>
+    <h3>By platform</h3>
+    <div class="barchart">
+      {% for row in stats.by_platform %}
+      {% set max_n = stats.by_platform[0].n %}
+      <div class="row"><span>{{ row.label }}</span><div class="bar" style="width: {{ (row.n / max_n * 100) | round(1) }}%"></div><span>{{ row.n }}</span></div>
+      {% endfor %}
+    </div>
+  </article>
+  <article>
+    <h3>By category</h3>
+    <div class="barchart">
+      {% for row in stats.by_category %}
+      {% set max_n = stats.by_category[0].n %}
+      <div class="row"><span>{{ row.label.replace('_',' ') }}</span><div class="bar" style="width: {{ (row.n / max_n * 100) | round(1) }}%"></div><span>{{ row.n }}</span></div>
+      {% endfor %}
+    </div>
+  </article>
+  <article>
+    <h3>By level</h3>
+    <div class="barchart">
+      {% for row in stats.by_level %}
+      {% set max_n = stats.by_level[0].n %}
+      <div class="row"><span>{{ row.label.replace('_',' ') }}</span><div class="bar" style="width: {{ (row.n / max_n * 100) | round(1) }}%"></div><span>{{ row.n }}</span></div>
+      {% endfor %}
+    </div>
+  </article>
+  <article>
+    <h3>Top companies</h3>
+    <div class="barchart">
+      {% for row in stats.top_companies %}
+      {% set max_n = stats.top_companies[0].n %}
+      <div class="row"><span>{{ row.label }}</span><div class="bar" style="width: {{ (row.n / max_n * 100) | round(1) }}%"></div><span>{{ row.n }}</span></div>
+      {% endfor %}
+    </div>
+  </article>
+</div>
+
+<article>
+  <h3>Jobs added (last 14 days)</h3>
+  <div class="barchart">
+    {% for row in stats.by_day %}
+    {% set max_n = stats.by_day | map(attribute='n') | max %}
+    <div class="row"><span>{{ row.label }}</span><div class="bar" style="width: {{ (row.n / max_n * 100) | round(1) }}%"></div><span>{{ row.n }}</span></div>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}
