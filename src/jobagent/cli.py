@@ -8,11 +8,13 @@ import json
 import logging
 import sys
 from pathlib import Path
+from dotenv import load_dotenv
 
 from .config import load_config
 from .database import Database
 from .models import Company
 
+load_dotenv()
 logger = logging.getLogger("jobagent")
 
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"

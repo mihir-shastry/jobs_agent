@@ -51,7 +51,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4   # re-checkout with the commit pushed above
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}   # re-checkout with the commit pushed above
 
       - uses: actions/configure-pages@v5
 
