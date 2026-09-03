@@ -25,11 +25,12 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install .
+        run: pip install -e .
 
       - name: Run portable scrape (Slack digest + docs/jobs.json)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          JOBAGENT_SEED_FILE: ${{ github.workspace }}/data/seed_companies.json
         run: python -m jobagent scrape-portable
 
       - name: Commit state (seen keys + exported jobs)
