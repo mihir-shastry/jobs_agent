@@ -36,12 +36,13 @@ jobs:
         run: |
           git config user.name "jobagent bot"
           git config user.email "action@github.com"
+          git fetch origin main
+          git reset --soft origin/main
           git add data/seen_jobs.jsonl docs/jobs.json
           if git diff --cached --quiet; then
             echo "No state changes"
           else
             git commit -m "scrape: update seen keys and jobs export ($(date -u +%Y-%m-%dT%H:%MZ))"
-            git pull --rebase origin main
             git push
           fi
 
