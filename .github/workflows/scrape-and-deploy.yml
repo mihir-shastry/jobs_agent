@@ -41,6 +41,7 @@ jobs:
             echo "No state changes"
           else
             git commit -m "scrape: update seen keys and jobs export ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git pull --rebase origin main
             git push
           fi
 
