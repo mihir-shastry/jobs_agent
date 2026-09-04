@@ -97,8 +97,11 @@ class ScrapeEngine:
     async def _scrape_company(self, adapter: ATSAdapter, company: dict) -> ScrapeResult:
         slug = company["slug"]
         result = ScrapeResult(company_slug=slug, ats_platform=adapter.platform)
+        # Adapters may skip extra per-job work (e.g. Lever's posted-date
+        # fetch) for postings already in the database.
+        known_ids = await self.database.get_external_ids(company["id"])
         try:
-            raw_jobs = await adapter.fetch_jobs(slug)
+            raw_jobs = await adapter.fetch_jobs(slug, known_ids)
         except NotFoundError:
             logger.info("board gone: %s/%s — deactivating", adapter.platform, slug)
             await self.database.set_company_active(company["id"], False)
@@ -143,8 +146,6 @@ class ScrapeEngine:
         raw.remote_type = _remote_type(raw.location)
 
     async def _lookup_job_id(self, company_id: int, external_id: str) -> Optional[int]:
-        ids = await self.database.get_external_ids(company_id)
-        # Cheap enough at board scale; refine later if needed.
         cursor = await self.database.db.execute(
             "SELECT id FROM jobs WHERE company_id = ? AND external_id = ?",
             (company_id, external_id),

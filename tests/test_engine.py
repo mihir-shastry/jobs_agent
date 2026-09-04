@@ -59,6 +59,10 @@ class TestRunCycle:
                  "categories": {"location": "San Francisco"}},
             ]
         )
+        # Lever's per-posting date fetch fires for the new job only.
+        lever_detail = respx.get("https://api.lever.co/v0/postings/beta/l1").respond(
+            json={"id": "l1", "createdAt": 1767225600000}
+        )
 
         engine = ScrapeEngine(config, db)
         results = await engine.run_cycle()
@@ -81,8 +85,14 @@ class TestRunCycle:
         companies = {c["slug"]: c for c in await db.get_companies()}
         assert "gone" not in companies  # deactivated
 
-        # Second run: no new jobs, no errors on active boards.
+        # New lever job got its publish date via the per-posting endpoint.
+        beta_rows = [r for r in rows if r["company_slug"] == "beta"]
+        assert beta_rows[0]["posted_at"] == "2026-01-01T00:00:00+00:00"
+        assert lever_detail.call_count == 1
+
+        # Second run: no new jobs, no errors, and no repeated date fetches.
         results2 = await engine.run_cycle()
         by_slug2 = {r.company_slug: r for r in results2}
         assert by_slug2["acme"].jobs_new == 0
         assert by_slug2["beta"].jobs_new == 0
+        assert lever_detail.call_count == 1  # known IDs skipped the detail call

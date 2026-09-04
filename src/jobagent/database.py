@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS jobs (
     salary_max INTEGER,
     salary_currency TEXT,
     departments TEXT,
+    posted_at DATETIME,
     first_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     is_active INTEGER NOT NULL DEFAULT 1,
     UNIQUE(company_id, external_id)
@@ -81,7 +82,16 @@ class Database:
         self._db = await aiosqlite.connect(self.path)
         self._db.row_factory = aiosqlite.Row
         await self._db.executescript(_SCHEMA)
+        await self._migrate()
         await self._db.commit()
+
+    async def _migrate(self) -> None:
+        """Lightweight column migrations for pre-existing databases."""
+        cursor = await self.db.execute("PRAGMA table_info(jobs)")
+        columns = {row["name"] for row in await cursor.fetchall()}
+        if "posted_at" not in columns:
+            logger.info("migrating jobs table: adding posted_at column")
+            await self.db.execute("ALTER TABLE jobs ADD COLUMN posted_at DATETIME")
 
     async def close(self) -> None:
         if self._db is not None:
@@ -160,8 +170,8 @@ class Database:
             INSERT INTO jobs (
                 company_id, external_id, title, location, remote_type,
                 experience_level, category, description, apply_url,
-                salary_min, salary_max, salary_currency, departments
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                salary_min, salary_max, salary_currency, departments, posted_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(company_id, external_id) DO NOTHING
             """,
             (
@@ -178,6 +188,7 @@ class Database:
                 job.salary_max,
                 job.salary_currency,
                 json.dumps(job.departments) if job.departments else None,
+                job.posted_at,
             ),
         )
         await self.db.commit()
@@ -245,12 +256,17 @@ class Database:
             where.append("j.remote_type = 'remote'")
 
         where_sql = f"WHERE {' AND '.join(where)}" if where else ""
+        # posted_at is the ATS publish date; fall back to first-seen for rows
+        # scraped before dates were tracked (or when the ATS doesn't expose one).
+        posted = "COALESCE(j.posted_at, j.first_seen_at)"
         order_sql = {
-            "newest": "j.first_seen_at DESC, j.id DESC",
-            "oldest": "j.first_seen_at ASC, j.id ASC",
+            "newest": f"{posted} DESC, j.id DESC",
+            "oldest": f"{posted} ASC, j.id ASC",
+            "newest_posted": f"{posted} DESC, j.id DESC",
+            "oldest_posted": f"{posted} ASC, j.id ASC",
             "company": "c.name ASC, j.title ASC",
             "title": "j.title ASC",
-        }.get(sort, "j.first_seen_at DESC, j.id DESC")
+        }.get(sort, f"{posted} DESC, j.id DESC")
 
         count_cursor = await self.db.execute(
             f"SELECT COUNT(*) AS n FROM jobs j JOIN companies c ON c.id = j.company_id {where_sql}",

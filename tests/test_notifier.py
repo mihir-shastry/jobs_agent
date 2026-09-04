@@ -64,7 +64,9 @@ class TestNotify:
         async def _run():
             route = respx.post("https://hooks.slack.com/services/TEST/URL").respond(status_code=200)
             result = await notifier.notify_new_jobs([seed["j1"], seed["j2"], seed["j3"], seed["j4"]])
-            assert result is True
+            assert result.sent is True
+            assert result.reason == "ok"
+            assert result.matching_jobs == 2
             assert route.called
             sent_payloads.append(route.calls.last.request.content)
 
@@ -81,27 +83,62 @@ class TestNotify:
         config._data["notifications"]["slack_webhook_url"] = ""  # no webhook
         notifier = Notifier(config, db)
         result = await notifier.notify_new_jobs([seed["j1"]])
-        assert result is False
+        assert result.sent is False
+        assert result.reason == "no_webhook"
         assert await db.is_notified(seed["j1"]) is True
 
     async def test_no_notification_when_disabled(self, config, db, seed):
         config._data["notifications"]["enabled"] = False
         notifier = Notifier(config, db)
-        assert await notifier.notify_new_jobs([seed["j1"]]) is False
+        report = await notifier.notify_new_jobs([seed["j1"]])
+        assert report.sent is False
+        assert report.reason == "notifications_disabled"
 
     @respx.mock
-    async def test_send_failure_still_records(self, config, db, seed):
+    async def test_send_failure_still_records(self, config, db, seed, monkeypatch):
+        monkeypatch.setattr("jobagent.notifier._RETRY_DELAY_SECONDS", 0)
         respx.post("https://hooks.slack.com/services/TEST/URL").respond(status_code=500)
         notifier = Notifier(config, db)
         result = await notifier.notify_new_jobs([seed["j1"]])
-        assert result is False
+        assert result.sent is False
+        assert result.reason == "slack_unreachable"
         assert await db.is_notified(seed["j1"]) is True
+
+    @respx.mock
+    async def test_retries_on_5xx_then_succeeds(self, config, db, seed, monkeypatch):
+        monkeypatch.setattr("jobagent.notifier._RETRY_DELAY_SECONDS", 0)
+        route = respx.post("https://hooks.slack.com/services/TEST/URL")
+        route.side_effect = [httpx.Response(500), httpx.Response(200)]
+        notifier = Notifier(config, db)
+        result = await notifier.notify_new_jobs([seed["j1"]])
+        assert result.sent is True
+        assert result.reason == "ok"
+        assert route.call_count == 2
+
+    async def test_no_matching_jobs_reason(self, config, db, seed):
+        notifier = Notifier(config, db)
+        report = await notifier.notify_new_jobs([seed["j2"]])  # senior, wrong category
+        assert report.sent is False
+        assert report.reason == "no_matching_jobs"
+        assert report.matching_jobs == 0
+
+    @respx.mock
+    async def test_test_digest_forces_send_without_recording(self, config, db, seed):
+        respx.post("https://hooks.slack.com/services/TEST/URL").respond(status_code=200)
+        notifier = Notifier(config, db)
+        report = await notifier.notify_test_digest([seed["j2"]], apply_filters=False)
+        assert report.sent is True
+        assert report.reason == "forced_test"
+        assert report.matching_jobs == 1
+        # Failed/forced sends are deliberately not recorded as notified.
+        assert await db.is_notified(seed["j2"]) is False
 
     def test_digest_block_structure(self, config, db, seed):
         notifier = Notifier(config, db)
         jobs = [
             {"experience_level": "internship", "title": "SWE Intern", "company_name": "Acme",
-             "location": "Remote", "apply_url": "https://a/1"},
+             "location": "Remote", "apply_url": "https://a/1",
+             "posted_at": "2026-02-14T12:00:00+00:00"},
             {"experience_level": "new_grad", "title": "NG SWE", "company_name": "Beta",
              "location": None, "apply_url": "https://a/2"},
         ]
@@ -111,3 +148,5 @@ class TestNotify:
         assert len(sections) == 2
         assert "Internships (1)" in sections[0]["text"]["text"]
         assert "New Grad (1)" in sections[1]["text"]["text"]
+        assert "· posted Feb 14" in sections[0]["text"]["text"]
+        assert "posted" not in sections[1]["text"]["text"]

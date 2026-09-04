@@ -25,6 +25,7 @@ from .database import Database
 from .engine import ScrapeEngine
 from .export import export_jobs_json
 from .models import Company
+from .notifier import EXPLICIT_REASONS, Notifier
 from .seeding import load_seed_companies
 from .statestore import SeenStore
 
@@ -42,8 +43,14 @@ async def run_portable_cycle(
     export_path: Path,
     *,
     seed_file: Path | None = None,
+    test_digest: bool = False,
 ) -> dict:
-    """Execute one portable scrape cycle. Returns a summary dict."""
+    """Execute one portable scrape cycle. Returns a summary dict.
+
+    With ``test_digest=True`` the normal digest is replaced by a forced test
+    digest of up to 5 recent jobs (verifies the webhook end-to-end); new jobs
+    are still recorded as seen so state stays clean.
+    """
     if config.notifications_enabled:
         # The engine's own notifier must stay off; this pipeline delivers the
         # digest itself after diffing against the seen-keys file.
@@ -58,7 +65,15 @@ async def run_portable_cycle(
         "jobs_found": 0,
         "new_jobs": 0,
         "digest_sent": False,
+        "test_digest": test_digest,
         "errors": 0,
+        "notification": {
+            "attempted": False,
+            "sent": False,
+            "reason": "no_jobs",
+            "explanation": EXPLICIT_REASONS["no_jobs"],
+            "matching_jobs": 0,
+        },
     }
 
     with TemporaryDirectory(prefix="jobagent-") as tmp_dir:
@@ -88,17 +103,18 @@ async def run_portable_cycle(
                 new_rows.append(row)
             summary["new_jobs"] = len(new_rows)
 
-            if new_rows:
-                digest_config = config.with_notifications(True)
-                if digest_config.notifications_enabled and digest_config.slack_webhook_url:
-                    from .notifier import Notifier
-
-                    notifier = Notifier(digest_config, db)
-                    sent = await notifier.notify_new_jobs([row["id"] for row in new_rows])
-                    summary["digest_sent"] = sent
-                    logger.info("digest sent=%s for %d new jobs", sent, len(new_rows))
-                else:
-                    logger.info("%d new jobs but no webhook configured", len(new_rows))
+            digest_config = config.with_notifications(True)
+            notifier = Notifier(digest_config, db)
+            if test_digest:
+                summary["notification"] = await _run_test_digest(
+                    notifier, digest_config, db
+                )
+                summary["digest_sent"] = summary["notification"]["sent"]
+            elif new_rows:
+                summary["notification"] = await _notify_new_rows(
+                    notifier, digest_config, [row["id"] for row in new_rows]
+                )
+                summary["digest_sent"] = summary["notification"]["sent"]
 
             stats = await export_jobs_json(db, export_path)
             summary["export"] = stats
@@ -107,8 +123,65 @@ async def run_portable_cycle(
 
     seen.save()
     logger.info(
-        "portable cycle done: %d boards, %d jobs, %d new, digest=%s",
+        "portable cycle done: %d boards, %d jobs, %d new, digest=%s (%s)",
         summary["boards_scraped"], summary["jobs_found"],
         summary["new_jobs"], summary["digest_sent"],
+        summary["notification"]["reason"],
     )
     return summary
+
+
+async def _notify_new_rows(
+    notifier: Notifier, digest_config: Config, new_job_ids: list[int]
+) -> dict:
+    """Send the regular digest for genuinely new jobs; return a report dict."""
+    if not digest_config.notifications_enabled:
+        return {"attempted": False, "sent": False, "reason": "notifications_disabled",
+                "explanation": EXPLICIT_REASONS["notifications_disabled"], "matching_jobs": 0}
+    if not digest_config.slack_webhook_url:
+        return {"attempted": False, "sent": False, "reason": "no_webhook",
+                "explanation": EXPLICIT_REASONS["no_webhook"], "matching_jobs": 0}
+    report = await notifier.notify_new_jobs(new_job_ids)
+    logger.info(
+        "digest sent=%s (%s) for %d new jobs, %d matched filters",
+        report.sent, report.reason, len(new_job_ids), report.matching_jobs,
+    )
+    return {
+        "attempted": True,
+        "sent": report.sent,
+        "reason": report.reason,
+        "explanation": report.explanation,
+        "matching_jobs": report.matching_jobs,
+    }
+
+
+async def _run_test_digest(notifier: Notifier, digest_config: Config, db: Database) -> dict:
+    """Force-send a digest of up to 5 recent filter-matching jobs."""
+    if not digest_config.slack_webhook_url:
+        return {"attempted": False, "sent": False, "reason": "no_webhook",
+                "explanation": EXPLICIT_REASONS["no_webhook"], "matching_jobs": 0}
+    rows, _total = await db.query_jobs(active_only=True, per_page=100_000)
+    levels = digest_config.filter_experience_levels
+    categories = digest_config.filter_categories
+    matching = [
+        row for row in rows
+        if (not levels or row["experience_level"] in levels)
+        and (not categories or row["category"] in categories)
+    ]
+    if not matching:
+        # The point of a test digest is verifying the webhook end-to-end, so
+        # fall back to any recent jobs when the filters match nothing.
+        logger.info("test digest: no filter-matching jobs; falling back to any recent jobs")
+        matching = rows
+    candidates = matching[:5]
+    report = await notifier.notify_test_digest(
+        [row["id"] for row in candidates], apply_filters=False
+    )
+    logger.info("test digest sent=%s (%s)", report.sent, report.reason)
+    return {
+        "attempted": True,
+        "sent": report.sent,
+        "reason": report.reason,
+        "explanation": report.explanation,
+        "matching_jobs": report.matching_jobs,
+    }

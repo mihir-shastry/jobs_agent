@@ -30,6 +30,7 @@
   .badge.mid { background: #e0e7ff; color: #3730a3; }
   .badge.senior { background: #fae8ff; color: #86198f; }
   .badge.remote { background: #d1fae5; color: #065f46; }
+  .badge.posted { background: #f1f5f9; color: #475569; }
   .status-btns { display: flex; gap: .3rem; }
   .status-btns button { font-size: .75rem; padding: .2rem .5rem; border: 1px solid #d5d8e0; background: #fff; border-radius: 6px; cursor: pointer; }
   .status-btns button.active { background: #1a1a2e; color: #fff; border-color: #1a1a2e; }
@@ -69,6 +70,11 @@
       <option value="lever">Lever</option>
       <option value="ashby">Ashby</option>
     </select>
+    <select id="sort" aria-label="Sort">
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="company">Company A–Z</option>
+    </select>
     <label><input type="checkbox" id="remote"> Remote only</label>
     <label><input type="checkbox" id="hideApplied"> Hide applied/ignored</label>
   </div>
@@ -90,6 +96,10 @@
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+  // ATS publish date with first-seen as fallback; 0 when unknown (sorted last).
+  const postTs = (j) => { const t = Date.parse(j.posted_at || j.first_seen_at || ""); return isNaN(t) ? 0 : t; };
+  const fmtPosted = (ts) => ts ? new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric" }) : "";
+
   function matches(j) {
     const q = $("q").value.trim().toLowerCase();
     if (q && !(j.title + " " + j.company_name + " " + (j.location || "")).toLowerCase().includes(q)) return false;
@@ -105,17 +115,30 @@
     const visible = ALL.filter(matches);
     $("count").textContent = `${visible.length} of ${ALL.length} jobs`;
     if (!visible.length) { list.innerHTML = "<div class='loaderr'>No matching jobs.</div>"; return; }
-    list.innerHTML = visible.slice(0, 300).map((j) => {
+    const mode = $("sort").value;
+    const sorted = visible.slice().sort((a, b) => {
+      if (mode === "company") return a.company_name.localeCompare(b.company_name) || postTs(b) - postTs(a);
+      const ad = postTs(a), bd = postTs(b);
+      if (!ad && !bd) return 0;
+      if (!ad) return 1;          // unknown dates always sink to the bottom
+      if (!bd) return -1;
+      const d = bd - ad;
+      return mode === "oldest" ? -d : d;
+    });
+    list.innerHTML = sorted.slice(0, 300).map((j) => {
       const st = statuses[j.id] || "";
       const cls = "job" + (st === "applied" ? " applied" : st === "ignored" ? " ignored" : "");
       const btn = (v, label) => `<button data-id="${j.id}" data-v="${v}" class="${st === v ? "active" : ""}">${label}</button>`;
       const remote = (j.location || "").toLowerCase().includes("remote") ? `<span class="badge remote">remote</span>` : "";
+      const postedTs = postTs(j);
+      const posted = postedTs ? `<span class="badge posted" title="ATS publish date">posted ${fmtPosted(postedTs)}</span>` : "";
       return `<div class="${cls}">
         <span class="title"><a href="${esc(j.apply_url)}" target="_blank" rel="noopener">${esc(j.title)}</a></span>
         <span class="company">${esc(j.company_name)}</span>
         <span class="loc">${esc(j.location || "")}</span>
         <span class="badge ${esc(j.experience_level)}">${esc(j.experience_level.replace("_", " "))}</span>
         ${remote}
+        ${posted}
         <span class="status-btns">${btn("saved", "⭐")}${btn("applied", "✓")}${btn("ignored", "✕")}${btn("", "·")}</span>
       </div>`;
     }).join("");
@@ -130,7 +153,7 @@
     render();
   });
 
-  ["q", "level", "platform", "remote", "hideApplied"].forEach((id) => {
+  ["q", "level", "platform", "sort", "remote", "hideApplied"].forEach((id) => {
     $(id).addEventListener(id === "q" ? "input" : "change", render);
   });
 

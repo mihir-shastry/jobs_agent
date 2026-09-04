@@ -46,7 +46,7 @@ def _mock_boards():
     respx.get("https://api.greenhouse.io/v1/boards/acme/jobs").respond(
         json={"jobs": [
             {"id": 1, "title": "Software Engineer Intern", "absolute_url": "https://gh/1",
-             "location": {"name": "Remote"}},
+             "location": {"name": "Remote"}, "first_published": "2026-02-14T12:00:00Z"},
             {"id": 2, "title": "Senior Data Scientist", "absolute_url": "https://gh/2",
              "location": {"name": "NYC"}},
         ]}
@@ -80,11 +80,14 @@ class TestPortableCycle:
         assert "Software Engineer Intern" in text
         assert "Senior Data Scientist" not in text  # filtered out (level+category)
 
-        # Export contains all 3 active jobs.
+        # Export contains all 3 active jobs, with the ATS publish date.
         data = json.loads(export.read_text())
         assert data["total"] == 3
         assert len(data["jobs"]) == 3
         assert "description" not in data["jobs"][0]
+        by_title = {j["title"]: j for j in data["jobs"]}
+        assert by_title["Software Engineer Intern"]["posted_at"] == "2026-02-14T12:00:00+00:00"
+        assert by_title["Senior Data Scientist"]["posted_at"] is None
 
         # Seen file has all 3 keys.
         keys = [json.loads(line)["k"] for line in seen.read_text().strip().splitlines()]
@@ -104,6 +107,7 @@ class TestPortableCycle:
         summary2 = await run_portable_cycle(config, seen, export, seed_file=seed_file)
         assert summary2["new_jobs"] == 0
         assert summary2["digest_sent"] is False
+        assert summary2["notification"]["reason"] == "no_jobs"
         assert slack_route.call_count == 1  # no new digest
 
     @respx.mock
@@ -131,7 +135,8 @@ class TestPortableCycle:
         assert "greenhouse:acme:1" in seen.read_text()
 
     @respx.mock
-    async def test_slack_failure_still_exports(self, config, tmp_path, seed_file):
+    async def test_slack_failure_still_exports(self, config, tmp_path, seed_file, monkeypatch):
+        monkeypatch.setattr("jobagent.notifier._RETRY_DELAY_SECONDS", 0)
         _mock_boards()
         respx.post("https://hooks.slack.com/services/T/B/X").respond(status_code=500)
 
@@ -140,6 +145,47 @@ class TestPortableCycle:
         summary = await run_portable_cycle(config, seen, export, seed_file=seed_file)
 
         assert summary["digest_sent"] is False
+        assert summary["notification"]["reason"] == "slack_unreachable"
+        assert summary["notification"]["attempted"] is True
         assert summary["new_jobs"] == 3
         assert json.loads(export.read_text())["total"] == 3
         assert (tmp_path / "seen_jobs.jsonl").exists()
+
+    @respx.mock
+    async def test_notification_report_fields_on_success(self, config, tmp_path, seed_file):
+        _mock_boards()
+        respx.post("https://hooks.slack.com/services/T/B/X").respond(status_code=200)
+        seen = tmp_path / "seen_jobs.jsonl"
+        export = tmp_path / "jobs.json"
+        summary = await run_portable_cycle(config, seen, export, seed_file=seed_file)
+        report = summary["notification"]
+        assert report["attempted"] is True
+        assert report["sent"] is True
+        assert report["reason"] == "ok"
+        assert report["matching_jobs"] == 2  # intern jobs match; senior doesn't
+
+    @respx.mock
+    async def test_test_digest_mode_sends_without_new_jobs(self, config, tmp_path, seed_file, monkeypatch):
+        monkeypatch.setattr("jobagent.notifier._RETRY_DELAY_SECONDS", 0)
+        _mock_boards()
+        slack_route = respx.post("https://hooks.slack.com/services/T/B/X").respond(status_code=200)
+        seen = tmp_path / "seen_jobs.jsonl"
+        export = tmp_path / "jobs.json"
+
+        summary = await run_portable_cycle(config, seen, export, seed_file=seed_file, test_digest=True)
+        assert summary["digest_sent"] is True
+        assert summary["notification"]["reason"] == "forced_test"
+        payload = json.loads(slack_route.calls.last.request.content)
+        text = json.dumps(payload)
+        # Test digest shows the filter-matching jobs (what the user would get).
+        assert "Software Engineer Intern" in text
+        assert "Senior Data Scientist" not in text
+
+        # test_digest still records seen keys and exports normally.
+        keys = [json.loads(line)["k"] for line in seen.read_text().strip().splitlines()]
+        assert len(keys) == 3
+        assert json.loads(export.read_text())["total"] == 3
+
+        # A subsequent regular run finds nothing new (state stayed clean).
+        summary2 = await run_portable_cycle(config, seen, export, seed_file=seed_file)
+        assert summary2["new_jobs"] == 0

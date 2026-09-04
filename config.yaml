@@ -1,0 +1,34 @@
+scraping:
+  # How often the scraper runs (minutes). Runs inside the web server process.
+  interval_minutes: 60
+  # Max concurrent HTTP requests per ATS platform.
+  max_concurrent_requests: 5
+  # Delay between sequential requests to the same platform (milliseconds).
+  request_delay_ms: 500
+
+ats_platforms:
+  greenhouse:
+    enabled: true
+  lever:
+    enabled: true
+  ashby:
+    enabled: true
+
+notifications:
+  # Leave empty and set SLACK_WEBHOOK_URL env var instead if you prefer.
+  slack_webhook_url: ""
+  enabled: true
+  # Only jobs matching ALL of these filters are included in the digest.
+  # Valid levels: internship, new_grad, entry, mid, senior
+  # Valid categories: swe, data_science, pm, design, quant, other
+  filters:
+    experience_levels: ["internship", "new_grad"]
+    categories: []          # empty = all categories
+
+dashboard:
+  host: "127.0.0.1"
+  port: 8000
+
+database:
+  # Relative to the project root.
+  path: "data/jobs.db"

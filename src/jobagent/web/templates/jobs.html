@@ -8,8 +8,8 @@
   <div class="filterbar">
     <input type="search" id="q" name="q" value="{{ q }}" placeholder="Search title, company, description…" style="flex:1; min-width:200px;">
     <select name="sort" aria-label="Sort">
-      {% for s in ("newest", "oldest", "company", "title") %}
-      <option value="{{ s }}" {% if sort == s %}selected{% endif %}>{{ s }}</option>
+      {% for s, label in [("newest", "Newest first"), ("oldest", "Oldest first"), ("company", "Company A–Z"), ("title", "Title A–Z")] %}
+      <option value="{{ s }}" {% if sort == s %}selected{% endif %}>{{ label }}</option>
       {% endfor %}
     </select>
     <label><input type="checkbox" name="remote_only" value="true" {% if remote_only %}checked{% endif %}> Remote only</label>

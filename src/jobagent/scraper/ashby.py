@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any
+from typing import Any, Optional
 
 from ..models import CompanyInfo, RawJob
 from ..sanitize import sanitize_description
@@ -30,7 +30,9 @@ class AshbyAdapter(ATSAdapter):
             "?includeCompensation=true"
         )
 
-    async def fetch_jobs(self, company_slug: str) -> list[RawJob]:
+    async def fetch_jobs(
+        self, company_slug: str, known_external_ids: Optional[set[str]] = None
+    ) -> list[RawJob]:
         data = await self.get_json(self._api_url(company_slug))
         posts = (data or {}).get("jobs") or []
         jobs: list[RawJob] = []
@@ -85,4 +87,5 @@ class AshbyAdapter(ATSAdapter):
             salary_max=salary_max,
             salary_currency=currency,
             departments=departments,
+            posted_at=self._parse_posted_at(post.get("publishedAt")),
         )

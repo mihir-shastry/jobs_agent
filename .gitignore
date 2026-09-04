@@ -10,9 +10,8 @@ venv/
 # Testing
 .pytest_cache/
 
-# Local data & secrets
+# Local data & secrets (config.yaml is committed — webhook lives in .env / GitHub secret)
 data/*.db
-config.yaml
 .env
 
 # OS

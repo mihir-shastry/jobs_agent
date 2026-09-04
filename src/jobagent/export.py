@@ -17,7 +17,7 @@ from .database import Database
 # Fields kept per job; everything else (description, salary, …) is omitted.
 _KEEP_FIELDS = (
     "id", "title", "company_name", "ats_platform", "location",
-    "experience_level", "category", "apply_url", "first_seen_at",
+    "experience_level", "category", "apply_url", "posted_at", "first_seen_at",
 )
 
 

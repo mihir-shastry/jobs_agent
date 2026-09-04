@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import logging
 from abc import ABC, abstractmethod
+from datetime import datetime, timezone
 from typing import Any, Optional
 
 import httpx
@@ -79,13 +80,50 @@ class ATSAdapter(ABC):
 
         raise last_exc or ATSError(f"failed to fetch {url}")
 
+    @staticmethod
+    def _parse_posted_at(value: Any) -> Optional[str]:
+        """Normalize an ATS publish-date field to ISO-8601 UTC.
+
+        Accepts ISO strings (Greenhouse/Ashby) and epoch milliseconds
+        (Lever's createdAt). Returns None for anything unparsable so a
+        missing date never breaks a scrape.
+        """
+        if not value:
+            return None
+        if isinstance(value, (int, float)):
+            try:
+                # Lever reports createdAt in epoch milliseconds.
+                dt = datetime.fromtimestamp(value / 1000, tz=timezone.utc)
+            except (ValueError, OSError, OverflowError):
+                return None
+            return dt.isoformat(timespec="seconds")
+        if isinstance(value, str):
+            text = value.strip()
+            if not text:
+                return None
+            try:
+                dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+            except ValueError:
+                return None
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc).isoformat(timespec="seconds")
+        return None
+
     @abstractmethod
     def board_url(self, company_slug: str) -> str:
         """Human-facing job board URL for a company slug."""
 
     @abstractmethod
-    async def fetch_jobs(self, company_slug: str) -> list[RawJob]:
-        """Fetch and normalize all postings for one company board."""
+    async def fetch_jobs(
+        self, company_slug: str, known_external_ids: Optional[set[str]] = None
+    ) -> list[RawJob]:
+        """Fetch and normalize all postings for one company board.
+
+        ``known_external_ids`` are IDs already persisted by the caller; adapters
+        may use them to skip extra work (e.g. Lever fetches publish dates only
+        for postings not yet known).
+        """
 
     async def probe_board(self, company_slug: str) -> Optional[CompanyInfo]:
         """Return CompanyInfo when a board exists for the slug, else None.

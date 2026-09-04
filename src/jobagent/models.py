@@ -40,6 +40,10 @@ class RawJob(BaseModel):
     salary_max: Optional[int] = None
     salary_currency: Optional[str] = None
     departments: list[str] = Field(default_factory=list)
+    # ISO-8601 timestamp when the ATS first published the posting, when the
+    # platform exposes it (Greenhouse first_published, Ashby publishedAt,
+    # Lever createdAt via a per-posting fetch). None = unknown.
+    posted_at: Optional[str] = None
 
     # Filled in by the classifier after normalization.
     experience_level: str = "entry"

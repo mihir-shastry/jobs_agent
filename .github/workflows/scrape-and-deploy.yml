@@ -3,7 +3,12 @@ name: Scrape jobs and deploy dashboard
 on:
   schedule:
     - cron: "0 * * * *"   # hourly
-  workflow_dispatch: {}    # manual trigger button
+  workflow_dispatch:
+    inputs:
+      test_digest:
+        description: "Force-send a test digest to Slack (verifies the webhook end-to-end)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,6 +36,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           JOBAGENT_SEED_FILE: ${{ github.workspace }}/data/seed_companies.json
+          JOBAGENT_TEST_DIGEST: ${{ inputs.test_digest }}
         run: python -m jobagent scrape-portable
 
       - name: Commit state (seen keys + exported jobs)

@@ -96,6 +96,93 @@ class TestNotifications:
         assert await db.is_notified(job_id) is True
 
 
+class TestPostedAt:
+    async def test_posted_at_stored_and_exported(self, db, company_id):
+        from jobagent.models import RawJob
+
+        job = _job("j1")
+        job.posted_at = "2026-02-14T12:00:00+00:00"
+        await db.upsert_job(company_id, job)
+        rows, _ = await db.query_jobs()
+        assert rows[0]["posted_at"] == "2026-02-14T12:00:00+00:00"
+
+    async def test_sort_by_posted_date_falls_back_to_first_seen(self, db, company_id):
+        from datetime import datetime, timedelta, timezone
+
+        base = datetime.now(timezone.utc)
+        old = _job("old")
+        old.posted_at = (base - timedelta(days=10)).isoformat(timespec="seconds")
+        new = _job("new")
+        new.posted_at = (base - timedelta(days=1)).isoformat(timespec="seconds")
+        undated = _job("undated")  # no posted_at → first_seen (now) fallback
+        await db.upsert_job(company_id, old)
+        await db.upsert_job(company_id, undated)
+        await db.upsert_job(company_id, new)
+
+        rows, _ = await db.query_jobs(sort="newest")
+        assert [r["external_id"] for r in rows] == ["undated", "new", "old"]
+        rows, _ = await db.query_jobs(sort="oldest")
+        assert [r["external_id"] for r in rows] == ["old", "new", "undated"]
+
+    async def test_migration_adds_posted_at(self, tmp_path, company_id_factory=None):
+        """A legacy DB without the column migrates cleanly and keeps data."""
+        import aiosqlite
+
+        legacy = tmp_path / "legacy.db"
+        async with aiosqlite.connect(legacy) as conn:
+            # Full pre-migration schema: everything except posted_at.
+            await conn.execute(
+                """
+                CREATE TABLE jobs (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    company_id INTEGER NOT NULL,
+                    external_id TEXT,
+                    title TEXT NOT NULL,
+                    location TEXT,
+                    remote_type TEXT NOT NULL DEFAULT 'unknown',
+                    experience_level TEXT NOT NULL DEFAULT 'entry',
+                    category TEXT NOT NULL DEFAULT 'other',
+                    description TEXT,
+                    apply_url TEXT NOT NULL,
+                    salary_min INTEGER,
+                    salary_max INTEGER,
+                    salary_currency TEXT,
+                    departments TEXT,
+                    first_seen_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                    is_active INTEGER NOT NULL DEFAULT 1
+                )
+                """
+            )
+            await conn.execute(
+                "INSERT INTO jobs (company_id, external_id, title, apply_url) VALUES (1, 'x', 'T', 'u')"
+            )
+            # query_jobs joins on companies; give the job its parent row.
+            await conn.execute(
+                """
+                CREATE TABLE companies (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    slug TEXT NOT NULL,
+                    ats_platform TEXT NOT NULL,
+                    is_active INTEGER NOT NULL DEFAULT 1
+                )
+                """
+            )
+            await conn.execute(
+                "INSERT INTO companies (name, slug, ats_platform) VALUES ('Acme', 'acme', 'greenhouse')"
+            )
+            await conn.commit()
+
+        db2 = Database(legacy)
+        await db2.connect()
+        try:
+            rows, total = await db2.query_jobs(active_only=False)
+            assert total == 1
+            assert rows[0]["posted_at"] is None
+        finally:
+            await db2.close()
+
+
 class TestStats:
     async def test_stats_shape(self, db, company_id):
         await db.upsert_job(company_id, _job("j1", "Software Engineer"))

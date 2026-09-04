@@ -89,17 +89,60 @@ async def _run_scrape_portable() -> int:
     export_path = Path(os.environ.get("JOBAGENT_EXPORT_PATH", repo_root / "docs" / "jobs.json"))
 
     seed_override = os.environ.get("JOBAGENT_SEED_FILE")
+    test_digest = os.environ.get("JOBAGENT_TEST_DIGEST", "").lower() in {"1", "true", "yes"}
     summary = await run_portable_cycle(
         config, seen_path, export_path,
         seed_file=Path(seed_override) if seed_override else None,
+        test_digest=test_digest,
     )
+    notification = summary["notification"]
     print(
         f"PORTABLE SUMMARY: boards={summary['boards_scraped']} "
         f"jobs={summary['jobs_found']} new={summary['new_jobs']} "
         f"digest={'sent' if summary['digest_sent'] else 'not-sent'} "
+        f"reason={notification['reason']} "
+        f"matched={notification['matching_jobs']} "
         f"errors={summary['errors']}"
     )
+    print(f"NOTIFICATION: {notification['explanation']}")
+    _write_step_summary(summary)
     return 0
+
+
+def _write_step_summary(summary: dict) -> None:
+    """Append a Markdown run summary when running inside GitHub Actions."""
+    import os
+
+    summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_file:
+        return
+    notification = summary["notification"]
+    export = summary.get("export") or {}
+    lines = [
+        "## Scrape summary",
+        "",
+        f"- **Boards scraped:** {summary['boards_scraped']} "
+        f"({summary['errors']} with errors)",
+        f"- **Active jobs found:** {summary['jobs_found']}",
+        f"- **New postings this run:** {summary['new_jobs']}",
+        f"- **New postings matching notification filters:** {notification['matching_jobs']}",
+        f"- **Digest ({'test' if summary.get('test_digest') else 'regular'}):** "
+        f"{'✅ sent' if summary['digest_sent'] else '❌ not sent'} — {notification['explanation']}",
+    ]
+    if export:
+        lines.append(
+            f"- **Exported dashboard data:** {export.get('exported', 0)} jobs "
+            f"({export.get('size_kb', 0)} KB)"
+        )
+    lines += [
+        "",
+        "<details><summary>Notification detail</summary>", "",
+        f"reason: `{notification['reason']}` · attempted: {notification['attempted']}",
+        "",
+        "</details>",
+    ]
+    with open(summary_file, "a", encoding="utf-8") as fh:
+        fh.write("\n".join(lines) + "\n")
 
 
 async def _discover() -> int:
