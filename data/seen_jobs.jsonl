@@ -1843,6 +1843,7 @@
 {"k":"ashby:perplexity:5c561bd0-c180-4ee1-b079-647f3c20bdc0","t":1789075417.733651}
 {"k":"ashby:perplexity:5ec96ca1-319a-4b85-99ce-e06629099cf9","t":1788470434.669719}
 {"k":"ashby:perplexity:60deb376-51b5-46c6-9e17-55377a5ef34e","t":1788470434.669719}
+{"k":"ashby:perplexity:656b4b2e-5670-411c-9091-f355983a92a0","t":1789334037.987628}
 {"k":"ashby:perplexity:6754c9cc-89c2-4d7f-b966-66de6e8cac4b","t":1789095360.18502}
 {"k":"ashby:perplexity:678d1162-e650-4d6d-9532-b287255c00fb","t":1788470434.669719}
 {"k":"ashby:perplexity:6829d54e-570b-4001-a822-3c1e85a34371","t":1788470434.669719}
@@ -1877,6 +1878,7 @@
 {"k":"ashby:perplexity:9ce0fef8-7ead-4c0d-a71e-433bdd5b4d82","t":1788470434.669719}
 {"k":"ashby:perplexity:9e3a4516-b893-4579-9a6a-3720658e4b6d","t":1788470434.669719}
 {"k":"ashby:perplexity:a14c4626-ed07-4151-a923-3a710fb66de2","t":1788470434.669719}
+{"k":"ashby:perplexity:a172ada5-1a6e-4646-8e0d-26747422af24","t":1789334037.987628}
 {"k":"ashby:perplexity:a19f1774-5944-4981-b446-e3e40d0dd281","t":1788470434.669719}
 {"k":"ashby:perplexity:a5b97109-222d-49e1-b2ac-e101487a5ddd","t":1788470434.669719}
 {"k":"ashby:perplexity:a805e14b-061d-469c-9136-b9e6a1855902","t":1788470434.669719}
@@ -2320,6 +2322,7 @@
 {"k":"greenhouse:affirm:7982371003","t":1789154857.693779}
 {"k":"greenhouse:affirm:7983767003","t":1788470434.669719}
 {"k":"greenhouse:affirm:7983769003","t":1788470434.669719}
+{"k":"greenhouse:affirm:7984425003","t":1789334037.987628}
 {"k":"greenhouse:affirm:7984707003","t":1789164870.805062}
 {"k":"greenhouse:affirm:7984714003","t":1789083729.938781}
 {"k":"greenhouse:affirm:7984716003","t":1789063500.104943}
@@ -3352,6 +3355,7 @@
 {"k":"greenhouse:databricks:8303020002","t":1788470434.669719}
 {"k":"greenhouse:databricks:8304676002","t":1788470434.669719}
 {"k":"greenhouse:databricks:8306218002","t":1788470434.669719}
+{"k":"greenhouse:databricks:8320183002","t":1789334037.987628}
 {"k":"greenhouse:databricks:8320187002","t":1788470434.669719}
 {"k":"greenhouse:databricks:8324875002","t":1788470434.669719}
 {"k":"greenhouse:databricks:8326513002","t":1788470434.669719}
@@ -5019,6 +5023,7 @@
 {"k":"greenhouse:elastic:8153229","t":1788470434.669719}
 {"k":"greenhouse:elastic:8153272","t":1788801161.464731}
 {"k":"greenhouse:elastic:8153274","t":1788470434.669719}
+{"k":"greenhouse:elastic:8154426","t":1789334037.987628}
 {"k":"greenhouse:elastic:8154995","t":1788470434.669719}
 {"k":"greenhouse:elastic:8154997","t":1788470434.669719}
 {"k":"greenhouse:elastic:8155216","t":1788470434.669719}
@@ -5482,6 +5487,7 @@
 {"k":"greenhouse:flexport:8158012","t":1788470434.669719}
 {"k":"greenhouse:flexport:8158023","t":1788470434.669719}
 {"k":"greenhouse:flexport:8158027","t":1788470434.669719}
+{"k":"greenhouse:flexport:8160593","t":1789334037.987628}
 {"k":"greenhouse:flexport:8160833","t":1788470434.669719}
 {"k":"greenhouse:flexport:8164060","t":1788470434.669719}
 {"k":"greenhouse:flexport:8164847","t":1788470434.669719}
@@ -5774,6 +5780,7 @@
 {"k":"greenhouse:gitlab:8789857002","t":1789207444.320604}
 {"k":"greenhouse:gitlab:8790102002","t":1789063500.104943}
 {"k":"greenhouse:gitlab:8790538002","t":1789164870.805062}
+{"k":"greenhouse:gitlab:8790705002","t":1789334037.987628}
 {"k":"greenhouse:gitlab:8792475002","t":1789001391.295227}
 {"k":"greenhouse:gitlab:8795736002","t":1789174465.616655}
 {"k":"greenhouse:gitlab:8801523002","t":1789154857.693779}
@@ -7291,6 +7298,7 @@
 {"k":"greenhouse:ripple:8180173","t":1788565375.372581}
 {"k":"greenhouse:ripple:8180204","t":1788545088.816439}
 {"k":"greenhouse:ripple:8186969","t":1788985382.191627}
+{"k":"greenhouse:ripple:8196325","t":1789334037.987628}
 {"k":"greenhouse:robinhood:4738660","t":1788470434.669719}
 {"k":"greenhouse:robinhood:6494244","t":1788470434.669719}
 {"k":"greenhouse:robinhood:6669758","t":1788470434.669719}
