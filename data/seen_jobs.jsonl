@@ -134,7 +134,6 @@
 {"k":"ashby:cursor:1910bd0e-806c-4e60-bfd6-157e369d6d02","t":1791080582.938172}
 {"k":"ashby:cursor:193c326d-2ffc-4c11-8bba-73d243fd178b","t":1791080582.938172}
 {"k":"ashby:cursor:1b422774-a090-455f-a8f8-64f68d7f86e5","t":1791080582.938172}
-{"k":"ashby:cursor:1cfacf1a-4ba7-4e68-9f65-4fb8e3525bde","t":1788518035.203335}
 {"k":"ashby:cursor:1d56ed97-eee3-406d-91e2-7feed88ce6f0","t":1791080582.938172}
 {"k":"ashby:cursor:1d6dbbb2-a5af-41a6-a70a-ca97690d9313","t":1791080582.938172}
 {"k":"ashby:cursor:232223c1-913a-4318-982b-1970e2842710","t":1791080582.938172}
@@ -206,7 +205,6 @@
 {"k":"ashby:cursor:a4fcfac1-8bf1-4804-a0fb-0ea97037772e","t":1790061403.42626}
 {"k":"ashby:cursor:a59371c8-cd50-48e3-9f21-4b79a6f0e3b2","t":1791080582.938172}
 {"k":"ashby:cursor:a6c00f7f-2288-4461-a64d-0f1cd9878909","t":1791080582.938172}
-{"k":"ashby:cursor:a750c967-7c4d-4704-a528-dcb63afc5f64","t":1788518035.203335}
 {"k":"ashby:cursor:aa50a09b-2413-44a0-a1b1-04381b03cc30","t":1791080582.938172}
 {"k":"ashby:cursor:aca52072-00b0-4c2b-9371-18689910cd14","t":1791080582.938172}
 {"k":"ashby:cursor:b0ef8a4d-64b5-4dc8-aeba-aa9ac0f430fc","t":1791080582.938172}
@@ -1571,6 +1569,7 @@
 {"k":"ashby:openai:ca300a6d-a2a7-4580-aad7-323fbdfee7b1","t":1791080582.938172}
 {"k":"ashby:openai:ca54cd23-2bcc-4327-bcb6-46d81ed414a8","t":1791080582.938172}
 {"k":"ashby:openai:ca7e4019-bf93-42fd-8f15-fac59c6e237c","t":1791080582.938172}
+{"k":"ashby:openai:ca869798-6dbc-4673-b15c-a7d00e49630b","t":1791126483.109266}
 {"k":"ashby:openai:ca9e0aeb-6df1-4b73-8ec0-2e9e124712f1","t":1791080582.938172}
 {"k":"ashby:openai:cadb7c24-2aea-4b98-a793-65ae9388b5d6","t":1791080582.938172}
 {"k":"ashby:openai:cb9280db-df39-4c88-b411-5fdf149a6e52","t":1791080582.938172}
@@ -2631,7 +2630,6 @@
 {"k":"greenhouse:cloudflare:8142219","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8142261","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8143252","t":1791080582.938172}
-{"k":"greenhouse:cloudflare:8143255","t":1788518035.203335}
 {"k":"greenhouse:cloudflare:8143314","t":1790273414.227124}
 {"k":"greenhouse:cloudflare:8143377","t":1790654933.536101}
 {"k":"greenhouse:cloudflare:8143511","t":1791080582.938172}
@@ -2678,7 +2676,6 @@
 {"k":"greenhouse:cloudflare:8164724","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8168623","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8168940","t":1788759617.045261}
-{"k":"greenhouse:cloudflare:8169264","t":1788533181.353857}
 {"k":"greenhouse:cloudflare:8169689","t":1788922769.363624}
 {"k":"greenhouse:cloudflare:8169785","t":1788994487.763155}
 {"k":"greenhouse:cloudflare:8170534","t":1788994487.763155}
@@ -2688,9 +2685,7 @@
 {"k":"greenhouse:cloudflare:8172023","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8172117","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8172153","t":1791080582.938172}
-{"k":"greenhouse:cloudflare:8172200","t":1788533181.353857}
 {"k":"greenhouse:cloudflare:8172246","t":1788545088.816439}
-{"k":"greenhouse:cloudflare:8172404","t":1788518035.203335}
 {"k":"greenhouse:cloudflare:8172411","t":1791080582.938172}
 {"k":"greenhouse:cloudflare:8172554","t":1788839529.546012}
 {"k":"greenhouse:cloudflare:8172582","t":1788839529.546012}
@@ -2964,7 +2959,6 @@
 {"k":"greenhouse:coinbase:8148171","t":1791080582.938172}
 {"k":"greenhouse:coinbase:8148248","t":1791080582.938172}
 {"k":"greenhouse:coinbase:8152576","t":1791080582.938172}
-{"k":"greenhouse:coinbase:8154342","t":1788518035.203335}
 {"k":"greenhouse:coinbase:8154856","t":1791080582.938172}
 {"k":"greenhouse:coinbase:8154987","t":1791080582.938172}
 {"k":"greenhouse:coinbase:8155366","t":1789001391.295227}
@@ -3009,7 +3003,6 @@
 {"k":"greenhouse:coinbase:8175569","t":1788909077.477742}
 {"k":"greenhouse:coinbase:8177619","t":1791080582.938172}
 {"k":"greenhouse:coinbase:8177946","t":1788909077.477742}
-{"k":"greenhouse:coinbase:8179114","t":1788518035.203335}
 {"k":"greenhouse:coinbase:8179210","t":1788565375.372581}
 {"k":"greenhouse:coinbase:8179214","t":1788556437.700232}
 {"k":"greenhouse:coinbase:8179311","t":1788565375.372581}
@@ -3154,6 +3147,7 @@
 {"k":"greenhouse:databricks:7649411002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7651326002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7651345002","t":1791080582.938172}
+{"k":"greenhouse:databricks:7651346002","t":1791126483.109266}
 {"k":"greenhouse:databricks:7652016002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7654347002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7654349002","t":1791080582.938172}
@@ -3706,7 +3700,6 @@
 {"k":"greenhouse:databricks:8651161002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8652590002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8652984002","t":1791080582.938172}
-{"k":"greenhouse:databricks:8653264002","t":1788533181.353857}
 {"k":"greenhouse:databricks:8654148002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8656202002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8656204002","t":1789502313.809007}
@@ -3716,6 +3709,7 @@
 {"k":"greenhouse:databricks:8657468002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8657478002","t":1788889533.649016}
 {"k":"greenhouse:databricks:8657488002","t":1791080582.938172}
+{"k":"greenhouse:databricks:8657549002","t":1791126483.109266}
 {"k":"greenhouse:databricks:8657553002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8657746002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8660983002","t":1791080582.938172}
@@ -3829,7 +3823,6 @@
 {"k":"greenhouse:databricks:8741927002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8742059002","t":1788960158.30983}
 {"k":"greenhouse:databricks:8742382002","t":1791080582.938172}
-{"k":"greenhouse:databricks:8743120002","t":1788533181.353857}
 {"k":"greenhouse:databricks:8746185002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8746374002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8747038002","t":1791080582.938172}
@@ -3858,6 +3851,7 @@
 {"k":"greenhouse:databricks:8760176002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8762360002","t":1791105572.854326}
 {"k":"greenhouse:databricks:8762362002","t":1791080582.938172}
+{"k":"greenhouse:databricks:8762366002","t":1791126483.109266}
 {"k":"greenhouse:databricks:8762388002","t":1788780749.142429}
 {"k":"greenhouse:databricks:8766584002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8768938002","t":1791080582.938172}
@@ -3869,8 +3863,6 @@
 {"k":"greenhouse:databricks:8770279002","t":1789112854.838092}
 {"k":"greenhouse:databricks:8770300002","t":1789112854.838092}
 {"k":"greenhouse:databricks:8770526002","t":1788565375.372581}
-{"k":"greenhouse:databricks:8770530002","t":1788518035.203335}
-{"k":"greenhouse:databricks:8770533002","t":1788518035.203335}
 {"k":"greenhouse:databricks:8771056002","t":1790200945.68925}
 {"k":"greenhouse:databricks:8771700002","t":1788545088.816439}
 {"k":"greenhouse:databricks:8771706002","t":1788545088.816439}
@@ -4327,7 +4319,6 @@
 {"k":"greenhouse:datadog:8147235","t":1791080582.938172}
 {"k":"greenhouse:datadog:8147489","t":1789670931.25613}
 {"k":"greenhouse:datadog:8147614","t":1791080582.938172}
-{"k":"greenhouse:datadog:8147740","t":1788518035.203335}
 {"k":"greenhouse:datadog:8147903","t":1791080582.938172}
 {"k":"greenhouse:datadog:8148092","t":1791080582.938172}
 {"k":"greenhouse:datadog:8152975","t":1791080582.938172}
@@ -4342,8 +4333,6 @@
 {"k":"greenhouse:datadog:8164122","t":1789364785.733739}
 {"k":"greenhouse:datadog:8164133","t":1791080582.938172}
 {"k":"greenhouse:datadog:8164181","t":1791080582.938172}
-{"k":"greenhouse:datadog:8164588","t":1788533181.353857}
-{"k":"greenhouse:datadog:8166231","t":1788533181.353857}
 {"k":"greenhouse:datadog:8167729","t":1789581432.286761}
 {"k":"greenhouse:datadog:8170070","t":1789752560.281189}
 {"k":"greenhouse:datadog:8170639","t":1789512417.340514}
@@ -4361,7 +4350,6 @@
 {"k":"greenhouse:datadog:8177270","t":1789018483.946297}
 {"k":"greenhouse:datadog:8177798","t":1788545088.816439}
 {"k":"greenhouse:datadog:8179647","t":1788900137.578634}
-{"k":"greenhouse:datadog:8179766","t":1788533181.353857}
 {"k":"greenhouse:datadog:8180459","t":1789407605.185972}
 {"k":"greenhouse:datadog:8180585","t":1788975136.65696}
 {"k":"greenhouse:datadog:8180681","t":1790353780.623138}
@@ -4534,8 +4522,6 @@
 {"k":"greenhouse:dropbox:8137896","t":1789407605.185972}
 {"k":"greenhouse:dropbox:8159652","t":1791080582.938172}
 {"k":"greenhouse:dropbox:8159724","t":1791080582.938172}
-{"k":"greenhouse:dropbox:8177609","t":1788533181.353857}
-{"k":"greenhouse:dropbox:8177610","t":1788533181.353857}
 {"k":"greenhouse:dropbox:8177614","t":1789063500.104943}
 {"k":"greenhouse:dropbox:8177617","t":1789063500.104943}
 {"k":"greenhouse:dropbox:8186675","t":1789502313.809007}
@@ -4889,7 +4875,6 @@
 {"k":"greenhouse:elastic:8162474","t":1791080582.938172}
 {"k":"greenhouse:elastic:8162476","t":1791080582.938172}
 {"k":"greenhouse:elastic:8162650","t":1791080582.938172}
-{"k":"greenhouse:elastic:8162896","t":1788533181.353857}
 {"k":"greenhouse:elastic:8164872","t":1791080582.938172}
 {"k":"greenhouse:elastic:8166580","t":1790273414.227124}
 {"k":"greenhouse:elastic:8166582","t":1789174465.616655}
@@ -5549,7 +5534,6 @@
 {"k":"greenhouse:gitlab:8775136002","t":1791080582.938172}
 {"k":"greenhouse:gitlab:8775507002","t":1791080582.938172}
 {"k":"greenhouse:gitlab:8778943002","t":1788975136.65696}
-{"k":"greenhouse:gitlab:8781246002","t":1788518035.203335}
 {"k":"greenhouse:gitlab:8781299002","t":1790233765.697114}
 {"k":"greenhouse:gitlab:8782040002","t":1791105572.854326}
 {"k":"greenhouse:gitlab:8782153002","t":1788638106.01682}
@@ -5703,7 +5687,6 @@
 {"k":"greenhouse:gusto:8144242","t":1789752560.281189}
 {"k":"greenhouse:gusto:8148547","t":1791080582.938172}
 {"k":"greenhouse:gusto:8148634","t":1791080582.938172}
-{"k":"greenhouse:gusto:8158019","t":1788533181.353857}
 {"k":"greenhouse:gusto:8160675","t":1790797722.956498}
 {"k":"greenhouse:gusto:8167482","t":1788985382.191627}
 {"k":"greenhouse:gusto:8167750","t":1790189374.289326}
@@ -6388,8 +6371,6 @@
 {"k":"greenhouse:mongodb:8163002","t":1789075417.733651}
 {"k":"greenhouse:mongodb:8164280","t":1788780749.142429}
 {"k":"greenhouse:mongodb:8167173","t":1789542716.964936}
-{"k":"greenhouse:mongodb:8168951","t":1788518035.203335}
-{"k":"greenhouse:mongodb:8169006","t":1788533181.353857}
 {"k":"greenhouse:mongodb:8170615","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8170628","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8170631","t":1789112854.838092}
@@ -6402,12 +6383,9 @@
 {"k":"greenhouse:mongodb:8173661","t":1788960158.30983}
 {"k":"greenhouse:mongodb:8173735","t":1790029536.268609}
 {"k":"greenhouse:mongodb:8173745","t":1789145660.252175}
-{"k":"greenhouse:mongodb:8173777","t":1788533181.353857}
-{"k":"greenhouse:mongodb:8173795","t":1788518035.203335}
 {"k":"greenhouse:mongodb:8173798","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8173801","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8174052","t":1790779113.145204}
-{"k":"greenhouse:mongodb:8174075","t":1788533181.353857}
 {"k":"greenhouse:mongodb:8174879","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8175160","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8176521","t":1791080582.938172}
@@ -7030,7 +7008,6 @@
 {"k":"greenhouse:ripple:8173045","t":1791080582.938172}
 {"k":"greenhouse:ripple:8173047","t":1791080582.938172}
 {"k":"greenhouse:ripple:8178722","t":1791105572.854326}
-{"k":"greenhouse:ripple:8179167","t":1788518035.203335}
 {"k":"greenhouse:ripple:8180173","t":1788565375.372581}
 {"k":"greenhouse:ripple:8180204","t":1788545088.816439}
 {"k":"greenhouse:ripple:8186969","t":1788985382.191627}
@@ -7592,7 +7569,6 @@
 {"k":"greenhouse:stripe:7954207","t":1791080582.938172}
 {"k":"greenhouse:stripe:7955051","t":1791080582.938172}
 {"k":"greenhouse:stripe:7955056","t":1791080582.938172}
-{"k":"greenhouse:stripe:7957302","t":1788518035.203335}
 {"k":"greenhouse:stripe:7958150","t":1791080582.938172}
 {"k":"greenhouse:stripe:7958961","t":1789164870.805062}
 {"k":"greenhouse:stripe:7960875","t":1790273414.227124}
@@ -7645,7 +7621,6 @@
 {"k":"greenhouse:stripe:8022463","t":1791080582.938172}
 {"k":"greenhouse:stripe:8022713","t":1791080582.938172}
 {"k":"greenhouse:stripe:8023524","t":1791080582.938172}
-{"k":"greenhouse:stripe:8023529","t":1788518035.203335}
 {"k":"greenhouse:stripe:8024033","t":1791080582.938172}
 {"k":"greenhouse:stripe:8026689","t":1791080582.938172}
 {"k":"greenhouse:stripe:8029043","t":1791080582.938172}
@@ -7867,7 +7842,6 @@
 {"k":"greenhouse:stripe:8152136","t":1788556437.700232}
 {"k":"greenhouse:stripe:8152994","t":1791080582.938172}
 {"k":"greenhouse:stripe:8153331","t":1791080582.938172}
-{"k":"greenhouse:stripe:8154304","t":1788533181.353857}
 {"k":"greenhouse:stripe:8154525","t":1791080582.938172}
 {"k":"greenhouse:stripe:8154531","t":1791080582.938172}
 {"k":"greenhouse:stripe:8155164","t":1791080582.938172}
@@ -7918,7 +7892,6 @@
 {"k":"greenhouse:stripe:8168793","t":1791080582.938172}
 {"k":"greenhouse:stripe:8168813","t":1788889533.649016}
 {"k":"greenhouse:stripe:8170772","t":1791080582.938172}
-{"k":"greenhouse:stripe:8170920","t":1788518035.203335}
 {"k":"greenhouse:stripe:8171095","t":1789421250.781774}
 {"k":"greenhouse:stripe:8171220","t":1789670931.25613}
 {"k":"greenhouse:stripe:8171222","t":1791080582.938172}
@@ -7962,7 +7935,6 @@
 {"k":"greenhouse:stripe:8175671","t":1788565375.372581}
 {"k":"greenhouse:stripe:8175673","t":1788556437.700232}
 {"k":"greenhouse:stripe:8175675","t":1788994487.763155}
-{"k":"greenhouse:stripe:8175816","t":1788518035.203335}
 {"k":"greenhouse:stripe:8175818","t":1788801161.464731}
 {"k":"greenhouse:stripe:8175820","t":1791080582.938172}
 {"k":"greenhouse:stripe:8175824","t":1790110354.298549}
@@ -8216,7 +8188,6 @@
 {"k":"greenhouse:twilio:7657993","t":1791080582.938172}
 {"k":"greenhouse:twilio:7661919","t":1791080582.938172}
 {"k":"greenhouse:twilio:7716279","t":1791080582.938172}
-{"k":"greenhouse:twilio:7767220","t":1788518035.203335}
 {"k":"greenhouse:twilio:7782805","t":1791080582.938172}
 {"k":"greenhouse:twilio:7785025","t":1791080582.938172}
 {"k":"greenhouse:twilio:7808464","t":1791080582.938172}
@@ -8240,7 +8211,6 @@
 {"k":"greenhouse:twilio:8001804","t":1788801161.464731}
 {"k":"greenhouse:twilio:8007449","t":1791080582.938172}
 {"k":"greenhouse:twilio:8007455","t":1791080582.938172}
-{"k":"greenhouse:twilio:8015738","t":1788518035.203335}
 {"k":"greenhouse:twilio:8015771","t":1791080582.938172}
 {"k":"greenhouse:twilio:8023560","t":1791080582.938172}
 {"k":"greenhouse:twilio:8026207","t":1791080582.938172}
@@ -8297,7 +8267,6 @@
 {"k":"greenhouse:twilio:8168599","t":1788608242.762799}
 {"k":"greenhouse:twilio:8170601","t":1788801161.464731}
 {"k":"greenhouse:twilio:8171112","t":1791080582.938172}
-{"k":"greenhouse:twilio:8171566","t":1788518035.203335}
 {"k":"greenhouse:twilio:8172311","t":1791080582.938172}
 {"k":"greenhouse:twilio:8172315","t":1788839529.546012}
 {"k":"greenhouse:twilio:8172319","t":1788839529.546012}
@@ -8464,7 +8433,6 @@
 {"k":"greenhouse:webflow:8165290","t":1791080582.938172}
 {"k":"greenhouse:webflow:8167866","t":1791080582.938172}
 {"k":"greenhouse:webflow:8172204","t":1791080582.938172}
-{"k":"greenhouse:webflow:8177523","t":1788533181.353857}
 {"k":"greenhouse:webflow:8186854","t":1788922769.363624}
 {"k":"greenhouse:webflow:8187380","t":1789512417.340514}
 {"k":"greenhouse:webflow:8201996","t":1789502313.809007}
