@@ -1075,7 +1075,6 @@
 {"k":"ashby:openai:135ab387-481d-4b63-8c7f-146945fe525a","t":1790754994.357711}
 {"k":"ashby:openai:137e3df0-2bd4-4ad4-8edb-8455a7fdc912","t":1790154211.841481}
 {"k":"ashby:openai:13cdb1b1-8c21-4bff-8201-f7ca904e181d","t":1791080582.938172}
-{"k":"ashby:openai:144b12f3-5821-4727-a266-b5ed9ff46fd2","t":1789762985.704304}
 {"k":"ashby:openai:14c5d693-7e85-4c26-8ca7-0b6f68fe6ace","t":1791540069.704508}
 {"k":"ashby:openai:1507068a-fe07-43e4-aaea-6fd1a00dc8d5","t":1791080582.938172}
 {"k":"ashby:openai:15ff9f15-c986-4ac3-ac2e-cd0f029afbd5","t":1790894055.39432}
@@ -1089,7 +1088,6 @@
 {"k":"ashby:openai:18f58952-c242-4562-8732-073a0ae8029e","t":1791080582.938172}
 {"k":"ashby:openai:194a69ed-d7a2-4af8-9bec-67a4b7b58451","t":1791080582.938172}
 {"k":"ashby:openai:1953efa7-5c1f-4878-b4cb-926cd35aafdb","t":1791080582.938172}
-{"k":"ashby:openai:1958bdb2-dffc-4bff-a614-c13e2b8efe6f","t":1789762985.704304}
 {"k":"ashby:openai:19755930-3377-49c2-949c-192629eb4119","t":1791479699.808412}
 {"k":"ashby:openai:19d112c5-e8f1-4326-80dd-0c0433e116ed","t":1792198925.241762}
 {"k":"ashby:openai:19fc3e36-3bf3-4a7c-b65f-498d89220436","t":1791080582.938172}
@@ -1167,7 +1165,6 @@
 {"k":"ashby:openai:2b9fa1aa-d844-4aa5-a762-6ac9bbb27d33","t":1791080582.938172}
 {"k":"ashby:openai:2bdd1b8b-2883-40fb-b006-583959ad4c5f","t":1791921875.177525}
 {"k":"ashby:openai:2c6a5737-aef9-4fe3-802c-295a4097e007","t":1792098998.172902}
-{"k":"ashby:openai:2c992fb3-0501-46fc-af5b-76660b4acfeb","t":1789762985.704304}
 {"k":"ashby:openai:2c9d0566-69b1-435e-bd8f-4eefc04dd076","t":1791080582.938172}
 {"k":"ashby:openai:2cba0d45-7a4f-4f38-ac73-3f8633bf0349","t":1791080582.938172}
 {"k":"ashby:openai:2d1785b0-8bfa-485e-97d2-a19ff3e15570","t":1790827423.293355}
@@ -1465,7 +1462,6 @@
 {"k":"ashby:openai:7caed1e8-c6f6-4569-9d45-2d7a7a56a025","t":1790315218.547345}
 {"k":"ashby:openai:7ce64627-b273-48e1-b3bc-ef4be0444706","t":1791540069.704508}
 {"k":"ashby:openai:7d49af15-623e-476a-9d35-831c5c9c9bf5","t":1791080582.938172}
-{"k":"ashby:openai:7d87459c-6085-4479-8e77-9255e6dd8329","t":1789762985.704304}
 {"k":"ashby:openai:7daff2af-1686-43fe-85c0-ca912c8747ac","t":1791080582.938172}
 {"k":"ashby:openai:7ded0fa1-4887-4de2-84c8-eecc756e86d9","t":1792178235.574993}
 {"k":"ashby:openai:7e198d81-34e0-48b6-b64e-a501a75f9d53","t":1791080582.938172}
@@ -2661,7 +2657,6 @@
 {"k":"greenhouse:airbnb:8207095","t":1792198925.241762}
 {"k":"greenhouse:airbnb:8209984","t":1792353874.733114}
 {"k":"greenhouse:airbnb:8211765","t":1792318926.877002}
-{"k":"greenhouse:airbnb:8214375","t":1789762985.704304}
 {"k":"greenhouse:airbnb:8214444","t":1789772455.117457}
 {"k":"greenhouse:airbnb:8224032","t":1790110354.298549}
 {"k":"greenhouse:airbnb:8224084","t":1790110354.298549}
@@ -2756,7 +2751,6 @@
 {"k":"greenhouse:airbnb:8288417","t":1792147230.156604}
 {"k":"greenhouse:airbnb:8299396","t":1792318926.877002}
 {"k":"greenhouse:bungie:6181868004","t":1791188259.919642}
-{"k":"greenhouse:bungie:6193602004","t":1789762985.704304}
 {"k":"greenhouse:bungie:6196059004","t":1790099734.105524}
 {"k":"greenhouse:bungie:6212202004","t":1792087241.966621}
 {"k":"greenhouse:bungie:6212204004","t":1792087241.966621}
@@ -4176,7 +4170,6 @@
 {"k":"greenhouse:databricks:8661359002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8661524002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8661758002","t":1791080582.938172}
-{"k":"greenhouse:databricks:8662803002","t":1789762985.704304}
 {"k":"greenhouse:databricks:8663972002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8675320002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8675568002","t":1791080582.938172}
@@ -4303,7 +4296,6 @@
 {"k":"greenhouse:databricks:8756144002","t":1791479699.808412}
 {"k":"greenhouse:databricks:8756150002","t":1792163497.963868}
 {"k":"greenhouse:databricks:8756154002","t":1790110354.298549}
-{"k":"greenhouse:databricks:8756686002","t":1789762985.704304}
 {"k":"greenhouse:databricks:8758263002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8758645002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8760165002","t":1791080582.938172}
@@ -4385,7 +4377,6 @@
 {"k":"greenhouse:databricks:8813464002","t":1792178235.574993}
 {"k":"greenhouse:databricks:8813515002","t":1792178235.574993}
 {"k":"greenhouse:databricks:8813844002","t":1792189778.753166}
-{"k":"greenhouse:databricks:8814526002","t":1789762985.704304}
 {"k":"greenhouse:databricks:8815165002","t":1792198925.241762}
 {"k":"greenhouse:databricks:8815669002","t":1792218749.785342}
 {"k":"greenhouse:databricks:8816435002","t":1790853650.202814}
@@ -4938,7 +4929,6 @@
 {"k":"greenhouse:datadog:8211078","t":1790619942.179545}
 {"k":"greenhouse:datadog:8211090","t":1792353874.733114}
 {"k":"greenhouse:datadog:8211563","t":1790082256.630045}
-{"k":"greenhouse:datadog:8212114","t":1789762985.704304}
 {"k":"greenhouse:datadog:8212513","t":1790718655.008313}
 {"k":"greenhouse:datadog:8213715","t":1792353874.733114}
 {"k":"greenhouse:datadog:8214090","t":1790174384.590428}
@@ -5080,7 +5070,6 @@
 {"k":"greenhouse:discord:8811881002","t":1791584006.064397}
 {"k":"greenhouse:discord:8811982002","t":1792301092.004159}
 {"k":"greenhouse:discord:8815116002","t":1789852664.514629}
-{"k":"greenhouse:discord:8817776002","t":1789762985.704304}
 {"k":"greenhouse:discord:8821508002","t":1790380092.462894}
 {"k":"greenhouse:discord:8822683002","t":1790110354.298549}
 {"k":"greenhouse:discord:8823881002","t":1790029536.268609}
@@ -5126,8 +5115,6 @@
 {"k":"greenhouse:dropbox:8159724","t":1791080582.938172}
 {"k":"greenhouse:dropbox:8177609","t":1791921875.177525}
 {"k":"greenhouse:dropbox:8177610","t":1791921875.177525}
-{"k":"greenhouse:dropbox:8207874","t":1789762985.704304}
-{"k":"greenhouse:dropbox:8207875","t":1789762985.704304}
 {"k":"greenhouse:dropbox:8208317","t":1792259139.169748}
 {"k":"greenhouse:dropbox:8211529","t":1790099734.105524}
 {"k":"greenhouse:dropbox:8211532","t":1790099734.105524}
@@ -5564,8 +5551,6 @@
 {"k":"greenhouse:elastic:8211249","t":1792277552.599452}
 {"k":"greenhouse:elastic:8211919","t":1790029536.268609}
 {"k":"greenhouse:elastic:8213963","t":1792353874.733114}
-{"k":"greenhouse:elastic:8214106","t":1789762985.704304}
-{"k":"greenhouse:elastic:8214187","t":1789762985.704304}
 {"k":"greenhouse:elastic:8214345","t":1790273414.227124}
 {"k":"greenhouse:elastic:8214702","t":1790703376.635097}
 {"k":"greenhouse:elastic:8220098","t":1789991879.566266}
@@ -5838,7 +5823,6 @@
 {"k":"greenhouse:figma:6180172004","t":1791597816.405309}
 {"k":"greenhouse:figma:6181922004","t":1791597816.405309}
 {"k":"greenhouse:figma:6186265004","t":1791673952.781116}
-{"k":"greenhouse:figma:6187903004","t":1789762985.704304}
 {"k":"greenhouse:figma:6189444004","t":1792009601.9653}
 {"k":"greenhouse:figma:6191316004","t":1790133247.570477}
 {"k":"greenhouse:figma:6191697004","t":1792198925.241762}
@@ -6058,8 +6042,6 @@
 {"k":"greenhouse:flexport:8213181","t":1792345731.679463}
 {"k":"greenhouse:flexport:8213734","t":1789780039.226762}
 {"k":"greenhouse:flexport:8213809","t":1790099734.105524}
-{"k":"greenhouse:flexport:8213953","t":1789762985.704304}
-{"k":"greenhouse:flexport:8213955","t":1789762985.704304}
 {"k":"greenhouse:flexport:8214366","t":1791661433.523733}
 {"k":"greenhouse:flexport:8221466","t":1790029536.268609}
 {"k":"greenhouse:flexport:8222037","t":1790119740.824335}
@@ -6225,7 +6207,6 @@
 {"k":"greenhouse:gitlab:8746461002","t":1791080582.938172}
 {"k":"greenhouse:gitlab:8749950002","t":1791080582.938172}
 {"k":"greenhouse:gitlab:8749951002","t":1791080582.938172}
-{"k":"greenhouse:gitlab:8750842002","t":1789762985.704304}
 {"k":"greenhouse:gitlab:8753656002","t":1791105572.854326}
 {"k":"greenhouse:gitlab:8753664002","t":1791105572.854326}
 {"k":"greenhouse:gitlab:8755524002","t":1792087241.966621}
@@ -6505,6 +6486,7 @@
 {"k":"greenhouse:gusto:8281363","t":1792087241.966621}
 {"k":"greenhouse:gusto:8282084","t":1792098998.172902}
 {"k":"greenhouse:gusto:8282421","t":1792009601.9653}
+{"k":"greenhouse:gusto:8293217","t":1792363532.033808}
 {"k":"greenhouse:instacart:6819435","t":1791080582.938172}
 {"k":"greenhouse:instacart:6819437","t":1791080582.938172}
 {"k":"greenhouse:instacart:7144697","t":1791080582.938172}
@@ -7182,7 +7164,6 @@
 {"k":"greenhouse:mongodb:8153218","t":1791499916.722229}
 {"k":"greenhouse:mongodb:8153715","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8154864","t":1792236058.982142}
-{"k":"greenhouse:mongodb:8155641","t":1789762985.704304}
 {"k":"greenhouse:mongodb:8157127","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8157328","t":1791080582.938172}
 {"k":"greenhouse:mongodb:8158531","t":1791080582.938172}
@@ -7590,7 +7571,6 @@
 {"k":"greenhouse:pinterest:8082503","t":1791080582.938172}
 {"k":"greenhouse:pinterest:8084337","t":1791080582.938172}
 {"k":"greenhouse:pinterest:8088867","t":1791080582.938172}
-{"k":"greenhouse:pinterest:8089344","t":1789762985.704304}
 {"k":"greenhouse:pinterest:8094012","t":1791080582.938172}
 {"k":"greenhouse:pinterest:8095322","t":1790029536.268609}
 {"k":"greenhouse:pinterest:8095343","t":1791080582.938172}
@@ -7983,8 +7963,6 @@
 {"k":"greenhouse:ripple:8201774","t":1790638968.975006}
 {"k":"greenhouse:ripple:8201778","t":1790638968.975006}
 {"k":"greenhouse:ripple:8206128","t":1792189778.753166}
-{"k":"greenhouse:ripple:8209342","t":1789762985.704304}
-{"k":"greenhouse:ripple:8209354","t":1789762985.704304}
 {"k":"greenhouse:ripple:8209410","t":1791222691.651636}
 {"k":"greenhouse:ripple:8220967","t":1790211789.320914}
 {"k":"greenhouse:ripple:8221386","t":1790189374.289326}
@@ -8151,8 +8129,6 @@
 {"k":"greenhouse:robinhood:8211219","t":1791262029.898622}
 {"k":"greenhouse:robinhood:8211226","t":1790040351.118687}
 {"k":"greenhouse:robinhood:8211233","t":1790295577.914528}
-{"k":"greenhouse:robinhood:8211366","t":1789762985.704304}
-{"k":"greenhouse:robinhood:8214142","t":1789762985.704304}
 {"k":"greenhouse:robinhood:8214383","t":1791309251.314716}
 {"k":"greenhouse:robinhood:8214553","t":1790110354.298549}
 {"k":"greenhouse:robinhood:8220699","t":1790040351.118687}
@@ -8383,7 +8359,6 @@
 {"k":"greenhouse:scaleai:4732430005","t":1791661433.523733}
 {"k":"greenhouse:scaleai:4732798005","t":1791673952.781116}
 {"k":"greenhouse:scaleai:4733702005","t":1792098998.172902}
-{"k":"greenhouse:scaleai:4734728005","t":1789762985.704304}
 {"k":"greenhouse:scaleai:4735208005","t":1792283871.239661}
 {"k":"greenhouse:scaleai:4735360005","t":1790287044.868585}
 {"k":"greenhouse:scaleai:4736243005","t":1790779113.145204}
@@ -9394,10 +9369,8 @@
 {"k":"greenhouse:twilio:8207721","t":1790082256.630045}
 {"k":"greenhouse:twilio:8208337","t":1792218749.785342}
 {"k":"greenhouse:twilio:8209103","t":1792283871.239661}
-{"k":"greenhouse:twilio:8213541","t":1789762985.704304}
 {"k":"greenhouse:twilio:8213730","t":1790174384.590428}
 {"k":"greenhouse:twilio:8213826","t":1790013677.237045}
-{"k":"greenhouse:twilio:8213861","t":1789762985.704304}
 {"k":"greenhouse:twilio:8223581","t":1790334389.663108}
 {"k":"greenhouse:twilio:8226528","t":1790273414.227124}
 {"k":"greenhouse:twilio:8226571","t":1790367276.41112}
@@ -9625,7 +9598,6 @@
 {"k":"greenhouse:ziprecruiter:8205669","t":1792128335.008858}
 {"k":"greenhouse:ziprecruiter:8209764","t":1792353874.733114}
 {"k":"greenhouse:ziprecruiter:8213931","t":1792353874.733114}
-{"k":"greenhouse:ziprecruiter:8214193","t":1789762985.704304}
 {"k":"greenhouse:ziprecruiter:8257317","t":1791243785.530582}
 {"k":"greenhouse:ziprecruiter:8257384","t":1791412832.378973}
 {"k":"greenhouse:ziprecruiter:8257454","t":1791412832.378973}
