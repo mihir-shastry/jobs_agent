@@ -1983,6 +1983,7 @@
 {"k":"ashby:openai:fe753283-d232-4470-8e20-fbeb217ea9e2","t":1791080582.938172}
 {"k":"ashby:openai:fecac6f9-2b94-454e-95ef-80d9b7abeb5a","t":1791287187.689844}
 {"k":"ashby:openai:ff316e82-c88a-4c94-91e1-2ccea6de129e","t":1792277552.599452}
+{"k":"ashby:perplexity:0113c03a-69d0-489d-bd11-451d11a9f64b","t":1792566091.178278}
 {"k":"ashby:perplexity:0190699f-010b-44f2-8399-278899fef018","t":1791080582.938172}
 {"k":"ashby:perplexity:03f8f956-1cb3-4945-81d1-73b7ff048d4e","t":1791080582.938172}
 {"k":"ashby:perplexity:043d6a58-87a1-4e3c-bf47-4dc351b94cf4","t":1791080582.938172}
@@ -3339,6 +3340,7 @@
 {"k":"greenhouse:cloudflare:8300941","t":1792520396.210645}
 {"k":"greenhouse:cloudflare:8303996","t":1792533906.035155}
 {"k":"greenhouse:cloudflare:8304060","t":1792533906.035155}
+{"k":"greenhouse:cloudflare:8304855","t":1792566091.178278}
 {"k":"greenhouse:coinbase:6784618","t":1791080582.938172}
 {"k":"greenhouse:coinbase:7182060","t":1790380092.462894}
 {"k":"greenhouse:coinbase:7254275","t":1792533906.035155}
@@ -9272,7 +9274,6 @@
 {"k":"greenhouse:stripe:8203220","t":1791338667.130923}
 {"k":"greenhouse:stripe:8203423","t":1792128335.008858}
 {"k":"greenhouse:stripe:8203649","t":1789991879.566266}
-{"k":"greenhouse:stripe:8203653","t":1789970004.50129}
 {"k":"greenhouse:stripe:8203966","t":1791479699.808412}
 {"k":"greenhouse:stripe:8203969","t":1791479699.808412}
 {"k":"greenhouse:stripe:8203973","t":1790174384.590428}
@@ -9498,6 +9499,7 @@
 {"k":"greenhouse:stripe:8300616","t":1792545377.050734}
 {"k":"greenhouse:stripe:8301253","t":1792450337.33586}
 {"k":"greenhouse:stripe:8301260","t":1792533906.035155}
+{"k":"greenhouse:stripe:8301264","t":1792566091.178278}
 {"k":"greenhouse:stripe:8301379","t":1792533906.035155}
 {"k":"greenhouse:stripe:8304836","t":1792545377.050734}
 {"k":"greenhouse:stripe:8304841","t":1792545377.050734}
