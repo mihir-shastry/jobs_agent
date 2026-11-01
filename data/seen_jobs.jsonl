@@ -2701,8 +2701,6 @@
 {"k":"greenhouse:affirm:8004096003","t":1793320534.511134}
 {"k":"greenhouse:affirm:8004950003","t":1792163497.963868}
 {"k":"greenhouse:affirm:8004995003","t":1793320534.511134}
-{"k":"greenhouse:affirm:8005075003","t":1790954507.518738}
-{"k":"greenhouse:affirm:8005077003","t":1790954507.518738}
 {"k":"greenhouse:affirm:8005402003","t":1791584006.064397}
 {"k":"greenhouse:affirm:8005406003","t":1793458823.643379}
 {"k":"greenhouse:affirm:8005408003","t":1793458823.643379}
@@ -3534,7 +3532,6 @@
 {"k":"greenhouse:cloudflare:8238758","t":1793458823.643379}
 {"k":"greenhouse:cloudflare:8239175","t":1793474029.453271}
 {"k":"greenhouse:cloudflare:8239323","t":1793474029.453271}
-{"k":"greenhouse:cloudflare:8239352","t":1790954507.518738}
 {"k":"greenhouse:cloudflare:8239834","t":1793434711.443667}
 {"k":"greenhouse:cloudflare:8239900","t":1793434711.443667}
 {"k":"greenhouse:cloudflare:8241766","t":1791822767.59764}
@@ -3550,7 +3547,6 @@
 {"k":"greenhouse:cloudflare:8244876","t":1793506598.268227}
 {"k":"greenhouse:cloudflare:8245197","t":1791262029.898622}
 {"k":"greenhouse:cloudflare:8245211","t":1791262029.898622}
-{"k":"greenhouse:cloudflare:8245501","t":1790954507.518738}
 {"k":"greenhouse:cloudflare:8245503","t":1790972428.192743}
 {"k":"greenhouse:cloudflare:8245561","t":1791847732.024577}
 {"k":"greenhouse:cloudflare:8245787","t":1791566273.434276}
@@ -3884,6 +3880,7 @@
 {"k":"greenhouse:coinbase:8222267","t":1792692972.990632}
 {"k":"greenhouse:coinbase:8224726","t":1792889309.160179}
 {"k":"greenhouse:coinbase:8224901","t":1792847132.359018}
+{"k":"greenhouse:coinbase:8224979","t":1793554643.622904}
 {"k":"greenhouse:coinbase:8227393","t":1792811554.527226}
 {"k":"greenhouse:coinbase:8230848","t":1791847732.024577}
 {"k":"greenhouse:coinbase:8232211","t":1793260787.765033}
@@ -4025,8 +4022,6 @@
 {"k":"greenhouse:databricks:6865687002","t":1791847732.024577}
 {"k":"greenhouse:databricks:6865698002","t":1793143736.579523}
 {"k":"greenhouse:databricks:6865704002","t":1793143736.579523}
-{"k":"greenhouse:databricks:6866531002","t":1790954507.518738}
-{"k":"greenhouse:databricks:6866534002","t":1790954507.518738}
 {"k":"greenhouse:databricks:6866538002","t":1792706675.409932}
 {"k":"greenhouse:databricks:6883068002","t":1791080582.938172}
 {"k":"greenhouse:databricks:6918763002","t":1791080582.938172}
@@ -4059,7 +4054,6 @@
 {"k":"greenhouse:databricks:7619810002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7619811002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7630152002","t":1791080582.938172}
-{"k":"greenhouse:databricks:7640764002","t":1790954507.518738}
 {"k":"greenhouse:databricks:7641390002","t":1791080582.938172}
 {"k":"greenhouse:databricks:7642125002","t":1791453431.838052}
 {"k":"greenhouse:databricks:7642799002","t":1791080582.938172}
@@ -4150,13 +4144,8 @@
 {"k":"greenhouse:databricks:8103500002","t":1793049603.449244}
 {"k":"greenhouse:databricks:8109902002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8125173002","t":1791080582.938172}
-{"k":"greenhouse:databricks:8133710002","t":1790954507.518738}
-{"k":"greenhouse:databricks:8133715002","t":1790954507.518738}
-{"k":"greenhouse:databricks:8133727002","t":1790954507.518738}
 {"k":"greenhouse:databricks:8136071002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8136204002","t":1791080582.938172}
-{"k":"greenhouse:databricks:8145776002","t":1790954507.518738}
-{"k":"greenhouse:databricks:8145800002","t":1790954507.518738}
 {"k":"greenhouse:databricks:8176503002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8178287002","t":1791080582.938172}
 {"k":"greenhouse:databricks:8183195002","t":1791080582.938172}
@@ -4918,7 +4907,6 @@
 {"k":"greenhouse:databricks:8844022002","t":1792951572.745962}
 {"k":"greenhouse:databricks:8845180002","t":1793411978.617313}
 {"k":"greenhouse:databricks:8845270002","t":1792963495.032847}
-{"k":"greenhouse:databricks:8847738002","t":1790954507.518738}
 {"k":"greenhouse:databricks:8849279002","t":1791222691.651636}
 {"k":"greenhouse:databricks:8849669002","t":1793223237.076319}
 {"k":"greenhouse:databricks:8849858002","t":1793223237.076319}
@@ -4928,7 +4916,6 @@
 {"k":"greenhouse:databricks:8855171002","t":1791898337.720998}
 {"k":"greenhouse:databricks:8855360002","t":1793320534.511134}
 {"k":"greenhouse:databricks:8855539002","t":1792620305.108577}
-{"k":"greenhouse:databricks:8855874002","t":1790954507.518738}
 {"k":"greenhouse:databricks:8856501002","t":1793400779.449192}
 {"k":"greenhouse:databricks:8856932002","t":1793411978.617313}
 {"k":"greenhouse:databricks:8859518002","t":1793286589.330291}
@@ -4948,8 +4935,6 @@
 {"k":"greenhouse:databricks:8862144002","t":1790972428.192743}
 {"k":"greenhouse:databricks:8863018002","t":1791847732.024577}
 {"k":"greenhouse:databricks:8863020002","t":1791222691.651636}
-{"k":"greenhouse:databricks:8863326002","t":1790954507.518738}
-{"k":"greenhouse:databricks:8863328002","t":1790954507.518738}
 {"k":"greenhouse:databricks:8864285002","t":1790972428.192743}
 {"k":"greenhouse:databricks:8864290002","t":1790972428.192743}
 {"k":"greenhouse:databricks:8864368002","t":1790972428.192743}
@@ -4985,7 +4970,9 @@
 {"k":"greenhouse:databricks:8879335002","t":1791847732.024577}
 {"k":"greenhouse:databricks:8879338002","t":1793032116.815646}
 {"k":"greenhouse:databricks:8880391002","t":1792436391.488447}
+{"k":"greenhouse:databricks:8880398002","t":1793554643.622904}
 {"k":"greenhouse:databricks:8880400002","t":1791788234.36775}
+{"k":"greenhouse:databricks:8880402002","t":1793554643.622904}
 {"k":"greenhouse:databricks:8880406002","t":1793109400.781904}
 {"k":"greenhouse:databricks:8882032002","t":1791584006.064397}
 {"k":"greenhouse:databricks:8882379002","t":1791822767.59764}
@@ -5062,6 +5049,7 @@
 {"k":"greenhouse:databricks:8910850002","t":1793049603.449244}
 {"k":"greenhouse:databricks:8910854002","t":1793533200.810395}
 {"k":"greenhouse:databricks:8910860002","t":1793143736.579523}
+{"k":"greenhouse:databricks:8910864002","t":1793554643.622904}
 {"k":"greenhouse:databricks:8910988002","t":1792789079.532017}
 {"k":"greenhouse:databricks:8912711002","t":1793223237.076319}
 {"k":"greenhouse:databricks:8916466002","t":1793533200.810395}
@@ -5080,6 +5068,7 @@
 {"k":"greenhouse:databricks:8922120002","t":1793386726.873102}
 {"k":"greenhouse:databricks:8922722002","t":1793260787.765033}
 {"k":"greenhouse:databricks:8922730002","t":1793342833.296295}
+{"k":"greenhouse:databricks:8922941002","t":1793554643.622904}
 {"k":"greenhouse:databricks:8923269002","t":1793286589.330291}
 {"k":"greenhouse:databricks:8923831002","t":1793307118.298775}
 {"k":"greenhouse:databricks:8924302002","t":1793368173.093642}
@@ -5534,7 +5523,6 @@
 {"k":"greenhouse:datadog:8237332","t":1793128472.530234}
 {"k":"greenhouse:datadog:8237428","t":1793411978.617313}
 {"k":"greenhouse:datadog:8237641","t":1793342833.296295}
-{"k":"greenhouse:datadog:8238132","t":1790954507.518738}
 {"k":"greenhouse:datadog:8238444","t":1791412832.378973}
 {"k":"greenhouse:datadog:8238455","t":1791222691.651636}
 {"k":"greenhouse:datadog:8238457","t":1791222691.651636}
@@ -5549,7 +5537,6 @@
 {"k":"greenhouse:datadog:8243071","t":1791540069.704508}
 {"k":"greenhouse:datadog:8243549","t":1791222691.651636}
 {"k":"greenhouse:datadog:8243668","t":1791995402.488149}
-{"k":"greenhouse:datadog:8243782","t":1790954507.518738}
 {"k":"greenhouse:datadog:8244033","t":1791393269.424609}
 {"k":"greenhouse:datadog:8244276","t":1790972428.192743}
 {"k":"greenhouse:datadog:8245889","t":1791898337.720998}
@@ -5560,9 +5547,6 @@
 {"k":"greenhouse:datadog:8247435","t":1791479699.808412}
 {"k":"greenhouse:datadog:8247518","t":1792388528.503289}
 {"k":"greenhouse:datadog:8247540","t":1791869025.562182}
-{"k":"greenhouse:datadog:8247686","t":1790954507.518738}
-{"k":"greenhouse:datadog:8248968","t":1790954507.518738}
-{"k":"greenhouse:datadog:8249202","t":1790954507.518738}
 {"k":"greenhouse:datadog:8250109","t":1791566273.434276}
 {"k":"greenhouse:datadog:8255788","t":1791898337.720998}
 {"k":"greenhouse:datadog:8256245","t":1791995402.488149}
@@ -6171,7 +6155,6 @@
 {"k":"greenhouse:elastic:8207937","t":1792353874.733114}
 {"k":"greenhouse:elastic:8207939","t":1792353874.733114}
 {"k":"greenhouse:elastic:8207941","t":1792189778.753166}
-{"k":"greenhouse:elastic:8208048","t":1790954507.518738}
 {"k":"greenhouse:elastic:8209779","t":1792652635.012662}
 {"k":"greenhouse:elastic:8211249","t":1792277552.599452}
 {"k":"greenhouse:elastic:8211919","t":1792652635.012662}
@@ -6226,13 +6209,13 @@
 {"k":"greenhouse:elastic:8244449","t":1791262029.898622}
 {"k":"greenhouse:elastic:8244496","t":1791584006.064397}
 {"k":"greenhouse:elastic:8245815","t":1792033631.844397}
+{"k":"greenhouse:elastic:8245817","t":1793554643.622904}
 {"k":"greenhouse:elastic:8245819","t":1791566273.434276}
 {"k":"greenhouse:elastic:8245844","t":1791366409.150203}
 {"k":"greenhouse:elastic:8246143","t":1791325114.748056}
 {"k":"greenhouse:elastic:8246948","t":1791287187.689844}
 {"k":"greenhouse:elastic:8247144","t":1791325114.748056}
 {"k":"greenhouse:elastic:8247206","t":1791287187.689844}
-{"k":"greenhouse:elastic:8249192","t":1790954507.518738}
 {"k":"greenhouse:elastic:8249252","t":1792631518.468039}
 {"k":"greenhouse:elastic:8249255","t":1792620305.108577}
 {"k":"greenhouse:elastic:8249856","t":1791325114.748056}
@@ -6519,7 +6502,6 @@
 {"k":"greenhouse:figma:6211088004","t":1792009601.9653}
 {"k":"greenhouse:figma:6211119004","t":1793411978.617313}
 {"k":"greenhouse:figma:6211847004","t":1791243785.530582}
-{"k":"greenhouse:figma:6211910004","t":1790954507.518738}
 {"k":"greenhouse:figma:6212642004","t":1791243785.530582}
 {"k":"greenhouse:figma:6214991004","t":1791222691.651636}
 {"k":"greenhouse:figma:6215865004","t":1791393269.424609}
@@ -7002,7 +6984,6 @@
 {"k":"greenhouse:gitlab:8842630002","t":1791584006.064397}
 {"k":"greenhouse:gitlab:8843512002","t":1793049603.449244}
 {"k":"greenhouse:gitlab:8844846002","t":1791898337.720998}
-{"k":"greenhouse:gitlab:8845277002","t":1790954507.518738}
 {"k":"greenhouse:gitlab:8845322002","t":1791222691.651636}
 {"k":"greenhouse:gitlab:8845483002","t":1793411978.617313}
 {"k":"greenhouse:gitlab:8845972002","t":1793237517.688478}
@@ -7593,13 +7574,10 @@
 {"k":"greenhouse:lyft:8856443002","t":1793506598.268227}
 {"k":"greenhouse:lyft:8856992002","t":1793411978.617313}
 {"k":"greenhouse:lyft:8857056002","t":1791222691.651636}
-{"k":"greenhouse:lyft:8860781002","t":1790954507.518738}
-{"k":"greenhouse:lyft:8860849002","t":1790954507.518738}
 {"k":"greenhouse:lyft:8860904002","t":1793506598.268227}
 {"k":"greenhouse:lyft:8861939002","t":1793533200.810395}
 {"k":"greenhouse:lyft:8862007002","t":1790972428.192743}
 {"k":"greenhouse:lyft:8862215002","t":1790972428.192743}
-{"k":"greenhouse:lyft:8863276002","t":1790954507.518738}
 {"k":"greenhouse:lyft:8863960002","t":1791188259.919642}
 {"k":"greenhouse:lyft:8865403002","t":1791309251.314716}
 {"k":"greenhouse:lyft:8865404002","t":1791309251.314716}
@@ -8062,7 +8040,6 @@
 {"k":"greenhouse:mongodb:8221290","t":1793223237.076319}
 {"k":"greenhouse:mongodb:8221293","t":1793223237.076319}
 {"k":"greenhouse:mongodb:8221353","t":1791243785.530582}
-{"k":"greenhouse:mongodb:8221355","t":1790954507.518738}
 {"k":"greenhouse:mongodb:8224590","t":1793320534.511134}
 {"k":"greenhouse:mongodb:8224592","t":1792009601.9653}
 {"k":"greenhouse:mongodb:8224682","t":1791921875.177525}
@@ -8073,7 +8050,6 @@
 {"k":"greenhouse:mongodb:8229703","t":1793400779.449192}
 {"k":"greenhouse:mongodb:8229848","t":1793320534.511134}
 {"k":"greenhouse:mongodb:8229891","t":1791222691.651636}
-{"k":"greenhouse:mongodb:8229892","t":1790954507.518738}
 {"k":"greenhouse:mongodb:8229901","t":1791822767.59764}
 {"k":"greenhouse:mongodb:8230043","t":1791262029.898622}
 {"k":"greenhouse:mongodb:8230143","t":1792951572.745962}
@@ -8098,7 +8074,6 @@
 {"k":"greenhouse:mongodb:8245668","t":1791995402.488149}
 {"k":"greenhouse:mongodb:8246377","t":1791412832.378973}
 {"k":"greenhouse:mongodb:8247670","t":1791222691.651636}
-{"k":"greenhouse:mongodb:8248829","t":1790954507.518738}
 {"k":"greenhouse:mongodb:8249278","t":1791222691.651636}
 {"k":"greenhouse:mongodb:8250236","t":1791540069.704508}
 {"k":"greenhouse:mongodb:8256571","t":1791309251.314716}
@@ -8699,7 +8674,6 @@
 {"k":"greenhouse:reddit:8238227","t":1792520396.210645}
 {"k":"greenhouse:reddit:8240716","t":1793342833.296295}
 {"k":"greenhouse:reddit:8243010","t":1793400779.449192}
-{"k":"greenhouse:reddit:8244067","t":1790954507.518738}
 {"k":"greenhouse:reddit:8244090","t":1793487852.999125}
 {"k":"greenhouse:reddit:8247280","t":1793487852.999125}
 {"k":"greenhouse:reddit:8249259","t":1790972428.192743}
@@ -10295,6 +10269,7 @@
 {"k":"greenhouse:stripe:8333122","t":1793386726.873102}
 {"k":"greenhouse:stripe:8335758","t":1793386726.873102}
 {"k":"greenhouse:stripe:8336023","t":1793342833.296295}
+{"k":"greenhouse:stripe:8336062","t":1793554643.622904}
 {"k":"greenhouse:stripe:8336819","t":1793386726.873102}
 {"k":"greenhouse:sumologic:7580057","t":1791080582.938172}
 {"k":"greenhouse:sumologic:7861294","t":1791080582.938172}
