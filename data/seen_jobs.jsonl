@@ -139,7 +139,6 @@
 {"k":"ashby:cursor:1a584899-847d-4e5b-8181-fb889fe4e06e","t":1792520396.210645}
 {"k":"ashby:cursor:1b422774-a090-455f-a8f8-64f68d7f86e5","t":1793727087.161037}
 {"k":"ashby:cursor:1cfacf1a-4ba7-4e68-9f65-4fb8e3525bde","t":1793760859.201194}
-{"k":"ashby:cursor:1d2b496f-c867-40ac-9ca7-cba8436ec2c4","t":1791499916.722229}
 {"k":"ashby:cursor:1d3a2047-4739-479b-914d-377046f0fd1a","t":1793816844.47483}
 {"k":"ashby:cursor:1d56ed97-eee3-406d-91e2-7feed88ce6f0","t":1793727087.161037}
 {"k":"ashby:cursor:1d6dbbb2-a5af-41a6-a70a-ca97690d9313","t":1793727087.161037}
@@ -300,7 +299,6 @@
 {"k":"ashby:elevenlabs:2d7f9a7c-a9e6-4877-bb38-34e4d989054c","t":1793727087.161037}
 {"k":"ashby:elevenlabs:2de358a6-ebea-4205-be57-33d1191154e3","t":1793727087.161037}
 {"k":"ashby:elevenlabs:317e26ca-75d1-4993-8041-3c440c28416e","t":1793128472.530234}
-{"k":"ashby:elevenlabs:31a6f0f4-8e1d-4d77-9d00-026ed12213f2","t":1791499916.722229}
 {"k":"ashby:elevenlabs:33bb01d0-993c-47fa-ae91-81c0c84f367e","t":1793646574.772986}
 {"k":"ashby:elevenlabs:347282a4-74ff-4e56-a92d-3c4249ee6c28","t":1793007628.811571}
 {"k":"ashby:elevenlabs:34dbe44c-9815-40b2-81f4-91c607fd84b2","t":1791822767.59764}
@@ -587,7 +585,6 @@
 {"k":"ashby:fireworks:a2850702-dea3-4e2c-a3ec-7ae257d36eb7","t":1793727087.161037}
 {"k":"ashby:fireworks:a2a1cdd0-c79c-4023-b8ba-3c1349aedbdb","t":1793727087.161037}
 {"k":"ashby:fireworks:a39db461-d3a9-4554-a50c-bb1a2783f159","t":1793646574.772986}
-{"k":"ashby:fireworks:a610c272-0a28-47a8-af24-ca3001453b4e","t":1791499916.722229}
 {"k":"ashby:fireworks:a6c58388-14b7-4c16-bd1f-5c2d3753d297","t":1793727087.161037}
 {"k":"ashby:fireworks:a83a980e-9e31-489b-964c-abd6cd11dff2","t":1792098998.172902}
 {"k":"ashby:fireworks:a8abf746-17f5-45e3-a72e-085ccb8f2d74","t":1793727087.161037}
@@ -603,7 +600,6 @@
 {"k":"ashby:fireworks:ccc2b11a-0996-4ed1-b5d6-7da20bbe73bc","t":1793727087.161037}
 {"k":"ashby:fireworks:cd8233f0-e958-40b5-a9a6-e35ecb9a76a4","t":1793727087.161037}
 {"k":"ashby:fireworks:cf2eec9f-be27-4694-861d-87e72ae535a1","t":1793816844.47483}
-{"k":"ashby:fireworks:d21fb019-124c-488d-ba36-b17367da0fe3","t":1791499916.722229}
 {"k":"ashby:fireworks:d4584282-0a3c-49e9-8d0f-bacb1937be60","t":1792109116.989175}
 {"k":"ashby:fireworks:d5063bc9-d2ac-4ee4-9e0c-23ea74ad83b2","t":1793727087.161037}
 {"k":"ashby:fireworks:d56d136d-2bcd-4331-bb0e-7dd6876570ad","t":1793286589.330291}
@@ -1250,7 +1246,6 @@
 {"k":"ashby:openai:566a5565-925c-4367-9912-6b64841beba2","t":1792777311.578164}
 {"k":"ashby:openai:5692fcec-bd48-40b4-9cd3-2c881faf176c","t":1793837278.946964}
 {"k":"ashby:openai:56aafd17-7db9-473a-b3b4-957b6d926cdf","t":1792109116.989175}
-{"k":"ashby:openai:56c5ab52-00f8-40ac-ace9-5bec355651d1","t":1791499916.722229}
 {"k":"ashby:openai:56d541d3-02b5-44d8-b40b-4df72cdd0405","t":1791566273.434276}
 {"k":"ashby:openai:56fceb8e-589b-410e-8b21-24f9945ccb9d","t":1793727087.161037}
 {"k":"ashby:openai:570df8ac-dacb-4686-b59c-ef48eed0580c","t":1793727087.161037}
@@ -1510,7 +1505,6 @@
 {"k":"ashby:openai:95283afd-0a20-4e15-9034-d34e88b66e5d","t":1792789079.532017}
 {"k":"ashby:openai:95d078d9-fd33-494c-8ba0-22fbb8b193ad","t":1792072569.313646}
 {"k":"ashby:openai:961d2951-ff59-494f-971e-fe25414c234c","t":1793671183.239043}
-{"k":"ashby:openai:96475a30-5aa1-4c56-802d-fe8a54c9cbd9","t":1791499916.722229}
 {"k":"ashby:openai:967f94aa-1706-4dba-ac89-bfbc2c38b688","t":1791788234.36775}
 {"k":"ashby:openai:96de8acb-556e-451b-bc84-7124bb4b0a20","t":1793727087.161037}
 {"k":"ashby:openai:96f3c3a6-9951-4db7-8125-8c0f16e8af62","t":1794026061.378207}
@@ -1877,7 +1871,6 @@
 {"k":"ashby:openai:f93ed20a-4a1c-43b4-895f-0830cdac6737","t":1792799228.647386}
 {"k":"ashby:openai:f9c64ecf-d52a-44f0-9d9f-99575ae80d7f","t":1793260787.765033}
 {"k":"ashby:openai:fa02b383-d5b0-45ea-b29e-3464ceeb4574","t":1793837278.946964}
-{"k":"ashby:openai:fa312d19-bb9e-4569-b5ed-aed8aa45cd3b","t":1791499916.722229}
 {"k":"ashby:openai:fa42ad51-0ffa-4ec4-a004-3f24d790a3d4","t":1792087241.966621}
 {"k":"ashby:openai:fa5114ae-c6ff-4bbd-9e21-5dcfafd032f7","t":1791788234.36775}
 {"k":"ashby:openai:fabfc6c5-57b5-49ba-aae9-e7dd5d7030ca","t":1793727087.161037}
@@ -1935,10 +1928,8 @@
 {"k":"ashby:perplexity:3f0dc0ad-aa9a-4cd8-aa75-245112f3b2de","t":1793085365.945606}
 {"k":"ashby:perplexity:3f800e42-7c48-4f9a-9b12-43ee23e52516","t":1793727087.161037}
 {"k":"ashby:perplexity:441daa65-5fd9-499d-91ac-acecdc1952d2","t":1792889309.160179}
-{"k":"ashby:perplexity:446ec593-aa8d-4ae4-a2c1-859b8373e1d5","t":1791499916.722229}
 {"k":"ashby:perplexity:4614796c-27b7-4b7f-8ccd-3711c99358d9","t":1792717888.766579}
 {"k":"ashby:perplexity:4b5e02a8-6a94-494d-9d49-037f2cfc144d","t":1793837278.946964}
-{"k":"ashby:perplexity:4bab4560-68b4-44ec-8a5c-5a39216f2abb","t":1791499916.722229}
 {"k":"ashby:perplexity:4c0ac8bb-55bf-4fb0-b7d7-36d69f55e6c8","t":1793727087.161037}
 {"k":"ashby:perplexity:4d8f7e23-8c80-4bd8-ad27-3f40cf17197b","t":1793609516.090213}
 {"k":"ashby:perplexity:4fba58de-a168-4948-9d82-a7d4b38f45f2","t":1793727087.161037}
@@ -2071,7 +2062,6 @@
 {"k":"ashby:replit:72866fb1-d377-4d3e-9851-f3d705449190","t":1793727087.161037}
 {"k":"ashby:replit:790afe73-238a-489c-875e-ac4e15780112","t":1791763969.443456}
 {"k":"ashby:replit:7b4bc2fe-5860-4f56-8746-aabb852cf0e1","t":1793727087.161037}
-{"k":"ashby:replit:7c3c9d29-cec2-4367-8564-eadaed165aea","t":1791499916.722229}
 {"k":"ashby:replit:7e48291b-6188-46d7-bc21-1d66a512ffcb","t":1793727087.161037}
 {"k":"ashby:replit:7fa1826e-d7fd-4837-8485-97de895ba7fc","t":1793727087.161037}
 {"k":"ashby:replit:8027a0f4-4837-4e49-a4dd-8ad1bde23277","t":1793934501.895086}
@@ -2382,7 +2372,6 @@
 {"k":"greenhouse:affirm:8011375003","t":1791584006.064397}
 {"k":"greenhouse:affirm:8011590003","t":1793609516.090213}
 {"k":"greenhouse:affirm:8011718003","t":1792777311.578164}
-{"k":"greenhouse:affirm:8012043003","t":1791499916.722229}
 {"k":"greenhouse:affirm:8012093003","t":1792533906.035155}
 {"k":"greenhouse:affirm:8012095003","t":1792533906.035155}
 {"k":"greenhouse:affirm:8012129003","t":1792021209.229967}
@@ -2393,7 +2382,6 @@
 {"k":"greenhouse:affirm:8013442003","t":1791921875.177525}
 {"k":"greenhouse:affirm:8013444003","t":1791921875.177525}
 {"k":"greenhouse:affirm:8013700003","t":1791898337.720998}
-{"k":"greenhouse:affirm:8015158003","t":1791499916.722229}
 {"k":"greenhouse:affirm:8015279003","t":1791956840.653755}
 {"k":"greenhouse:affirm:8015283003","t":1791956840.653755}
 {"k":"greenhouse:affirm:8016833003","t":1792098998.172902}
@@ -2574,7 +2562,6 @@
 {"k":"greenhouse:airbnb:8172734","t":1793727087.161037}
 {"k":"greenhouse:airbnb:8172735","t":1793727087.161037}
 {"k":"greenhouse:airbnb:8175521","t":1793727087.161037}
-{"k":"greenhouse:airbnb:8176559","t":1791499916.722229}
 {"k":"greenhouse:airbnb:8178467","t":1793727087.161037}
 {"k":"greenhouse:airbnb:8178505","t":1791513957.757709}
 {"k":"greenhouse:airbnb:8184174","t":1791584006.064397}
@@ -2976,7 +2963,6 @@
 {"k":"greenhouse:cloudflare:8172554","t":1794086759.891956}
 {"k":"greenhouse:cloudflare:8172582","t":1794086759.891956}
 {"k":"greenhouse:cloudflare:8172873","t":1791566273.434276}
-{"k":"greenhouse:cloudflare:8173393","t":1791499916.722229}
 {"k":"greenhouse:cloudflare:8173707","t":1793727087.161037}
 {"k":"greenhouse:cloudflare:8173954","t":1791788234.36775}
 {"k":"greenhouse:cloudflare:8173956","t":1791763969.443456}
@@ -3143,7 +3129,6 @@
 {"k":"greenhouse:cloudflare:8264664","t":1791566273.434276}
 {"k":"greenhouse:cloudflare:8264687","t":1794086759.891956}
 {"k":"greenhouse:cloudflare:8264695","t":1791921875.177525}
-{"k":"greenhouse:cloudflare:8265704","t":1791499916.722229}
 {"k":"greenhouse:cloudflare:8266408","t":1792388528.503289}
 {"k":"greenhouse:cloudflare:8267396","t":1791847732.024577}
 {"k":"greenhouse:cloudflare:8267826","t":1791566273.434276}
@@ -3685,9 +3670,7 @@
 {"k":"greenhouse:databricks:7680573002","t":1793727087.161037}
 {"k":"greenhouse:databricks:7716357002","t":1793816844.47483}
 {"k":"greenhouse:databricks:7734812002","t":1793727087.161037}
-{"k":"greenhouse:databricks:7737233002","t":1791499916.722229}
 {"k":"greenhouse:databricks:7762173002","t":1793206745.814525}
-{"k":"greenhouse:databricks:7795026002","t":1791499916.722229}
 {"k":"greenhouse:databricks:7803651002","t":1793727087.161037}
 {"k":"greenhouse:databricks:7807722002","t":1793727087.161037}
 {"k":"greenhouse:databricks:7839474002","t":1792087241.966621}
@@ -4259,7 +4242,6 @@
 {"k":"greenhouse:databricks:8762362002","t":1793727087.161037}
 {"k":"greenhouse:databricks:8762366002","t":1793746390.446245}
 {"k":"greenhouse:databricks:8766584002","t":1793727087.161037}
-{"k":"greenhouse:databricks:8768956002","t":1791499916.722229}
 {"k":"greenhouse:databricks:8768958002","t":1793727087.161037}
 {"k":"greenhouse:databricks:8769750002","t":1793727087.161037}
 {"k":"greenhouse:databricks:8769764002","t":1793727087.161037}
@@ -4268,7 +4250,6 @@
 {"k":"greenhouse:databricks:8771566002","t":1791540069.704508}
 {"k":"greenhouse:databricks:8771702002","t":1792984064.967339}
 {"k":"greenhouse:databricks:8779014002","t":1791751643.572809}
-{"k":"greenhouse:databricks:8779016002","t":1791499916.722229}
 {"k":"greenhouse:databricks:8779018002","t":1791822767.59764}
 {"k":"greenhouse:databricks:8779023002","t":1791822767.59764}
 {"k":"greenhouse:databricks:8779031002","t":1792706675.409932}
@@ -4398,7 +4379,6 @@
 {"k":"greenhouse:databricks:8860657002","t":1792218749.785342}
 {"k":"greenhouse:databricks:8860663002","t":1793934501.895086}
 {"k":"greenhouse:databricks:8860665002","t":1794008327.676373}
-{"k":"greenhouse:databricks:8860667002","t":1791499916.722229}
 {"k":"greenhouse:databricks:8860669002","t":1794008327.676373}
 {"k":"greenhouse:databricks:8862144002","t":1793582093.86942}
 {"k":"greenhouse:databricks:8863018002","t":1791847732.024577}
@@ -4420,7 +4400,6 @@
 {"k":"greenhouse:databricks:8870940002","t":1793837278.946964}
 {"k":"greenhouse:databricks:8871482002","t":1794008327.676373}
 {"k":"greenhouse:databricks:8871484002","t":1791847732.024577}
-{"k":"greenhouse:databricks:8871486002","t":1791499916.722229}
 {"k":"greenhouse:databricks:8871488002","t":1791898337.720998}
 {"k":"greenhouse:databricks:8872760002","t":1792520396.210645}
 {"k":"greenhouse:databricks:8873053002","t":1794008327.676373}
@@ -4432,7 +4411,6 @@
 {"k":"greenhouse:databricks:8876675002","t":1794026061.378207}
 {"k":"greenhouse:databricks:8876680002","t":1792388528.503289}
 {"k":"greenhouse:databricks:8877962002","t":1791936491.903624}
-{"k":"greenhouse:databricks:8877968002","t":1791499916.722229}
 {"k":"greenhouse:databricks:8878066002","t":1792924865.246218}
 {"k":"greenhouse:databricks:8878095002","t":1791690806.329853}
 {"k":"greenhouse:databricks:8878722002","t":1794086759.891956}
@@ -4807,7 +4785,6 @@
 {"k":"greenhouse:datadog:8129799","t":1791513957.757709}
 {"k":"greenhouse:datadog:8130580","t":1793727087.161037}
 {"k":"greenhouse:datadog:8131949","t":1793727087.161037}
-{"k":"greenhouse:datadog:8131985","t":1791499916.722229}
 {"k":"greenhouse:datadog:8132294","t":1791513957.757709}
 {"k":"greenhouse:datadog:8136510","t":1793727087.161037}
 {"k":"greenhouse:datadog:8138482","t":1793727087.161037}
@@ -5046,6 +5023,7 @@
 {"k":"greenhouse:datadog:8349721","t":1794008327.676373}
 {"k":"greenhouse:datadog:8350101","t":1794026061.378207}
 {"k":"greenhouse:datadog:8350419","t":1793746390.446245}
+{"k":"greenhouse:datadog:8351509","t":1794099859.888275}
 {"k":"greenhouse:datadog:8354556","t":1794026061.378207}
 {"k":"greenhouse:datadog:8355189","t":1793917907.322354}
 {"k":"greenhouse:datadog:8358479","t":1793965685.237803}
@@ -5122,8 +5100,6 @@
 {"k":"greenhouse:dropbox:8249475","t":1793837278.946964}
 {"k":"greenhouse:dropbox:8249957","t":1792777311.578164}
 {"k":"greenhouse:dropbox:8249958","t":1792777311.578164}
-{"k":"greenhouse:dropbox:8261911","t":1791499916.722229}
-{"k":"greenhouse:dropbox:8261916","t":1791499916.722229}
 {"k":"greenhouse:dropbox:8275002","t":1793746390.446245}
 {"k":"greenhouse:dropbox:8279631","t":1792606924.679455}
 {"k":"greenhouse:dropbox:8279632","t":1792606924.679455}
@@ -5757,7 +5733,6 @@
 {"k":"greenhouse:figma:6152695004","t":1792021209.229967}
 {"k":"greenhouse:figma:6158162004","t":1793727087.161037}
 {"k":"greenhouse:figma:6160732004","t":1793727087.161037}
-{"k":"greenhouse:figma:6161021004","t":1791499916.722229}
 {"k":"greenhouse:figma:6163420004","t":1791690806.329853}
 {"k":"greenhouse:figma:6166497004","t":1792706675.409932}
 {"k":"greenhouse:figma:6166608004","t":1793727087.161037}
@@ -5792,11 +5767,8 @@
 {"k":"greenhouse:figma:6211910004","t":1793569243.643074}
 {"k":"greenhouse:figma:6212642004","t":1793864489.882605}
 {"k":"greenhouse:figma:6215865004","t":1794008327.676373}
-{"k":"greenhouse:figma:6216211004","t":1791499916.722229}
 {"k":"greenhouse:figma:6217137004","t":1791995402.488149}
-{"k":"greenhouse:figma:6218349004","t":1791499916.722229}
 {"k":"greenhouse:figma:6219995004","t":1791921875.177525}
-{"k":"greenhouse:figma:6220093004","t":1791499916.722229}
 {"k":"greenhouse:figma:6221563004","t":1791956840.653755}
 {"k":"greenhouse:figma:6222861004","t":1792589105.859159}
 {"k":"greenhouse:figma:6223155004","t":1792178235.574993}
@@ -6009,7 +5981,6 @@
 {"k":"greenhouse:flexport:8241588","t":1793368173.093642}
 {"k":"greenhouse:flexport:8242629","t":1793474029.453271}
 {"k":"greenhouse:flexport:8245878","t":1791788234.36775}
-{"k":"greenhouse:flexport:8247659","t":1791499916.722229}
 {"k":"greenhouse:flexport:8256562","t":1791822767.59764}
 {"k":"greenhouse:flexport:8256564","t":1794008327.676373}
 {"k":"greenhouse:flexport:8256566","t":1794008327.676373}
@@ -6020,8 +5991,6 @@
 {"k":"greenhouse:flexport:8260171","t":1792388528.503289}
 {"k":"greenhouse:flexport:8263322","t":1792520396.210645}
 {"k":"greenhouse:flexport:8263332","t":1792520396.210645}
-{"k":"greenhouse:flexport:8263427","t":1791499916.722229}
-{"k":"greenhouse:flexport:8265884","t":1791499916.722229}
 {"k":"greenhouse:flexport:8265974","t":1791597816.405309}
 {"k":"greenhouse:flexport:8266024","t":1791597816.405309}
 {"k":"greenhouse:flexport:8269055","t":1791956840.653755}
@@ -6148,7 +6117,6 @@
 {"k":"greenhouse:gitlab:8782306002","t":1791584006.064397}
 {"k":"greenhouse:gitlab:8782471002","t":1791513957.757709}
 {"k":"greenhouse:gitlab:8783485002","t":1791566273.434276}
-{"k":"greenhouse:gitlab:8784056002","t":1791499916.722229}
 {"k":"greenhouse:gitlab:8784185002","t":1792163497.963868}
 {"k":"greenhouse:gitlab:8785825002","t":1791597816.405309}
 {"k":"greenhouse:gitlab:8786095002","t":1791763969.443456}
@@ -6248,7 +6216,6 @@
 {"k":"greenhouse:gitlab:8877426002","t":1792189778.753166}
 {"k":"greenhouse:gitlab:8877428002","t":1792198925.241762}
 {"k":"greenhouse:gitlab:8877434002","t":1792198925.241762}
-{"k":"greenhouse:gitlab:8877510002","t":1791499916.722229}
 {"k":"greenhouse:gitlab:8878486002","t":1792072569.313646}
 {"k":"greenhouse:gitlab:8879798002","t":1792009601.9653}
 {"k":"greenhouse:gitlab:8880947002","t":1792652635.012662}
@@ -6394,7 +6361,6 @@
 {"k":"greenhouse:gusto:8110106","t":1793727087.161037}
 {"k":"greenhouse:gusto:8119978","t":1794008327.676373}
 {"k":"greenhouse:gusto:8128422","t":1792799228.647386}
-{"k":"greenhouse:gusto:8142163","t":1791499916.722229}
 {"k":"greenhouse:gusto:8142994","t":1793727087.161037}
 {"k":"greenhouse:gusto:8144140","t":1793727087.161037}
 {"k":"greenhouse:gusto:8144242","t":1792353874.733114}
@@ -6433,7 +6399,6 @@
 {"k":"greenhouse:gusto:8244957","t":1792178235.574993}
 {"k":"greenhouse:gusto:8244969","t":1793934501.895086}
 {"k":"greenhouse:gusto:8244981","t":1792178235.574993}
-{"k":"greenhouse:gusto:8247940","t":1791499916.722229}
 {"k":"greenhouse:gusto:8248374","t":1793837278.946964}
 {"k":"greenhouse:gusto:8250243","t":1793965685.237803}
 {"k":"greenhouse:gusto:8257115","t":1791921875.177525}
@@ -6441,7 +6406,6 @@
 {"k":"greenhouse:gusto:8257486","t":1792606924.679455}
 {"k":"greenhouse:gusto:8257865","t":1791956840.653755}
 {"k":"greenhouse:gusto:8257877","t":1791956840.653755}
-{"k":"greenhouse:gusto:8260095","t":1791499916.722229}
 {"k":"greenhouse:gusto:8260099","t":1794008327.676373}
 {"k":"greenhouse:gusto:8268021","t":1791847732.024577}
 {"k":"greenhouse:gusto:8275011","t":1791936491.903624}
@@ -6500,7 +6464,6 @@
 {"k":"greenhouse:instacart:8157736","t":1793727087.161037}
 {"k":"greenhouse:instacart:8157738","t":1793727087.161037}
 {"k":"greenhouse:instacart:8157774","t":1793727087.161037}
-{"k":"greenhouse:instacart:8177874","t":1791499916.722229}
 {"k":"greenhouse:instacart:8177972","t":1793727087.161037}
 {"k":"greenhouse:instacart:8188987","t":1791597816.405309}
 {"k":"greenhouse:instacart:8190576","t":1791690806.329853}
@@ -6719,7 +6682,6 @@
 {"k":"greenhouse:lyft:8872142002","t":1793934501.895086}
 {"k":"greenhouse:lyft:8872198002","t":1793934501.895086}
 {"k":"greenhouse:lyft:8872290002","t":1793934501.895086}
-{"k":"greenhouse:lyft:8880066002","t":1791499916.722229}
 {"k":"greenhouse:lyft:8880839002","t":1791847732.024577}
 {"k":"greenhouse:lyft:8880840002","t":1791566273.434276}
 {"k":"greenhouse:lyft:8881573002","t":1791566273.434276}
@@ -6997,7 +6959,6 @@
 {"k":"greenhouse:mongodb:8153134","t":1792109116.989175}
 {"k":"greenhouse:mongodb:8153137","t":1792198925.241762}
 {"k":"greenhouse:mongodb:8153173","t":1791661433.523733}
-{"k":"greenhouse:mongodb:8153218","t":1791499916.722229}
 {"k":"greenhouse:mongodb:8153715","t":1793727087.161037}
 {"k":"greenhouse:mongodb:8154864","t":1792236058.982142}
 {"k":"greenhouse:mongodb:8155641","t":1792370853.702079}
@@ -7122,11 +7083,9 @@
 {"k":"greenhouse:mongodb:8257245","t":1793864489.882605}
 {"k":"greenhouse:mongodb:8258279","t":1791566273.434276}
 {"k":"greenhouse:mongodb:8258710","t":1791921875.177525}
-{"k":"greenhouse:mongodb:8258712","t":1791499916.722229}
 {"k":"greenhouse:mongodb:8260947","t":1794008327.676373}
 {"k":"greenhouse:mongodb:8262052","t":1793368173.093642}
 {"k":"greenhouse:mongodb:8262077","t":1794086759.891956}
-{"k":"greenhouse:mongodb:8263092","t":1791499916.722229}
 {"k":"greenhouse:mongodb:8263247","t":1792706675.409932}
 {"k":"greenhouse:mongodb:8263467","t":1792692972.990632}
 {"k":"greenhouse:mongodb:8264146","t":1794086759.891956}
@@ -7318,7 +7277,6 @@
 {"k":"greenhouse:nuro:8230855","t":1793965685.237803}
 {"k":"greenhouse:nuro:8249825","t":1793582093.86942}
 {"k":"greenhouse:nuro:8263453","t":1791847732.024577}
-{"k":"greenhouse:nuro:8263454","t":1791499916.722229}
 {"k":"greenhouse:nuro:8263455","t":1791847732.024577}
 {"k":"greenhouse:nuro:8263629","t":1791936491.903624}
 {"k":"greenhouse:nuro:8263630","t":1791847732.024577}
@@ -7444,7 +7402,6 @@
 {"k":"greenhouse:pinterest:8213988","t":1792411499.133064}
 {"k":"greenhouse:pinterest:8214745","t":1793487852.999125}
 {"k":"greenhouse:pinterest:8214757","t":1793487852.999125}
-{"k":"greenhouse:pinterest:8214788","t":1791499916.722229}
 {"k":"greenhouse:pinterest:8226679","t":1792502343.514939}
 {"k":"greenhouse:pinterest:8226882","t":1793864489.882605}
 {"k":"greenhouse:pinterest:8227344","t":1793864489.882605}
@@ -7554,7 +7511,6 @@
 {"k":"greenhouse:reddit:7974605","t":1791847732.024577}
 {"k":"greenhouse:reddit:7980795","t":1793727087.161037}
 {"k":"greenhouse:reddit:7996994","t":1794008327.676373}
-{"k":"greenhouse:reddit:8010425","t":1791499916.722229}
 {"k":"greenhouse:reddit:8011428","t":1793760859.201194}
 {"k":"greenhouse:reddit:8017242","t":1793727087.161037}
 {"k":"greenhouse:reddit:8018513","t":1793727087.161037}
@@ -7662,7 +7618,6 @@
 {"k":"greenhouse:reddit:8256326","t":1794026061.378207}
 {"k":"greenhouse:reddit:8257083","t":1794008327.676373}
 {"k":"greenhouse:reddit:8263374","t":1794026061.378207}
-{"k":"greenhouse:reddit:8263407","t":1791499916.722229}
 {"k":"greenhouse:reddit:8263435","t":1792777311.578164}
 {"k":"greenhouse:reddit:8275143","t":1791847732.024577}
 {"k":"greenhouse:reddit:8275745","t":1792388528.503289}
@@ -7960,21 +7915,16 @@
 {"k":"greenhouse:robinhood:8231449","t":1793671183.239043}
 {"k":"greenhouse:robinhood:8232853","t":1793307118.298775}
 {"k":"greenhouse:robinhood:8232855","t":1793307118.298775}
-{"k":"greenhouse:robinhood:8238000","t":1791499916.722229}
 {"k":"greenhouse:robinhood:8238565","t":1793411978.617313}
 {"k":"greenhouse:robinhood:8240638","t":1793342833.296295}
 {"k":"greenhouse:robinhood:8244209","t":1791513957.757709}
 {"k":"greenhouse:robinhood:8244634","t":1793864489.882605}
 {"k":"greenhouse:robinhood:8247333","t":1793837278.946964}
-{"k":"greenhouse:robinhood:8248165","t":1791499916.722229}
 {"k":"greenhouse:robinhood:8248320","t":1793237517.688478}
 {"k":"greenhouse:robinhood:8250279","t":1794086759.891956}
-{"k":"greenhouse:robinhood:8250286","t":1791499916.722229}
 {"k":"greenhouse:robinhood:8250300","t":1792198925.241762}
 {"k":"greenhouse:robinhood:8250341","t":1792388528.503289}
-{"k":"greenhouse:robinhood:8255842","t":1791499916.722229}
 {"k":"greenhouse:robinhood:8257636","t":1793049603.449244}
-{"k":"greenhouse:robinhood:8257655","t":1791499916.722229}
 {"k":"greenhouse:robinhood:8259035","t":1793934501.895086}
 {"k":"greenhouse:robinhood:8259652","t":1794026061.378207}
 {"k":"greenhouse:robinhood:8259694","t":1791584006.064397}
@@ -8238,7 +8188,6 @@
 {"k":"greenhouse:stripe:7369543","t":1793727087.161037}
 {"k":"greenhouse:stripe:7370967","t":1793727087.161037}
 {"k":"greenhouse:stripe:7377101","t":1793727087.161037}
-{"k":"greenhouse:stripe:7389692","t":1791499916.722229}
 {"k":"greenhouse:stripe:7392697","t":1793727087.161037}
 {"k":"greenhouse:stripe:7393071","t":1793727087.161037}
 {"k":"greenhouse:stripe:7396679","t":1793727087.161037}
@@ -8588,7 +8537,6 @@
 {"k":"greenhouse:stripe:8175824","t":1792717888.766579}
 {"k":"greenhouse:stripe:8175826","t":1793727087.161037}
 {"k":"greenhouse:stripe:8175828","t":1792147230.156604}
-{"k":"greenhouse:stripe:8175832","t":1791499916.722229}
 {"k":"greenhouse:stripe:8175834","t":1793727087.161037}
 {"k":"greenhouse:stripe:8176254","t":1791751643.572809}
 {"k":"greenhouse:stripe:8176256","t":1792163497.963868}
@@ -8599,7 +8547,6 @@
 {"k":"greenhouse:stripe:8176733","t":1792872682.126419}
 {"k":"greenhouse:stripe:8176737","t":1792259139.169748}
 {"k":"greenhouse:stripe:8177513","t":1793727087.161037}
-{"k":"greenhouse:stripe:8177634","t":1791499916.722229}
 {"k":"greenhouse:stripe:8177860","t":1793727087.161037}
 {"k":"greenhouse:stripe:8178459","t":1791513957.757709}
 {"k":"greenhouse:stripe:8178563","t":1791597816.405309}
@@ -8720,7 +8667,6 @@
 {"k":"greenhouse:stripe:8209641","t":1792789079.532017}
 {"k":"greenhouse:stripe:8209647","t":1792353874.733114}
 {"k":"greenhouse:stripe:8209649","t":1792620305.108577}
-{"k":"greenhouse:stripe:8209967","t":1791499916.722229}
 {"k":"greenhouse:stripe:8209970","t":1792606924.679455}
 {"k":"greenhouse:stripe:8209996","t":1792620305.108577}
 {"k":"greenhouse:stripe:8210218","t":1793746390.446245}
@@ -8841,7 +8787,6 @@
 {"k":"greenhouse:stripe:8248207","t":1793506598.268227}
 {"k":"greenhouse:stripe:8248415","t":1793368173.093642}
 {"k":"greenhouse:stripe:8248507","t":1793864489.882605}
-{"k":"greenhouse:stripe:8248509","t":1791499916.722229}
 {"k":"greenhouse:stripe:8249652","t":1793934501.895086}
 {"k":"greenhouse:stripe:8249865","t":1793582093.86942}
 {"k":"greenhouse:stripe:8249901","t":1793582093.86942}
@@ -9134,11 +9079,9 @@
 {"k":"greenhouse:twilio:8160279","t":1791566273.434276}
 {"k":"greenhouse:twilio:8160532","t":1793727087.161037}
 {"k":"greenhouse:twilio:8168599","t":1793864489.882605}
-{"k":"greenhouse:twilio:8170555","t":1791499916.722229}
 {"k":"greenhouse:twilio:8170597","t":1792777311.578164}
 {"k":"greenhouse:twilio:8171112","t":1793727087.161037}
 {"k":"greenhouse:twilio:8175075","t":1791763969.443456}
-{"k":"greenhouse:twilio:8178812","t":1791499916.722229}
 {"k":"greenhouse:twilio:8180238","t":1791513957.757709}
 {"k":"greenhouse:twilio:8185629","t":1791597816.405309}
 {"k":"greenhouse:twilio:8185918","t":1791584006.064397}
@@ -9193,7 +9136,6 @@
 {"k":"greenhouse:twilio:8261245","t":1791584006.064397}
 {"k":"greenhouse:twilio:8261247","t":1791847732.024577}
 {"k":"greenhouse:twilio:8261277","t":1791956840.653755}
-{"k":"greenhouse:twilio:8261442","t":1791499916.722229}
 {"k":"greenhouse:twilio:8261528","t":1791566273.434276}
 {"k":"greenhouse:twilio:8261705","t":1791847732.024577}
 {"k":"greenhouse:twilio:8261708","t":1792789079.532017}
